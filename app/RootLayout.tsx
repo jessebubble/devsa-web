@@ -6,11 +6,10 @@ import { createContext, useContext, useEffect, useId, useRef, useState } from 'r
 import clsx from 'clsx';
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
 import { Container } from '~/components/Container';
-import { Logo, Logomark } from '~/components/Logo';
+import { DevSaLogo } from '~/components/Logo';
 import { Meetups } from '~/components/Meetups';
 import { SocialMedia } from '~/components/SocialMedia';
 import { Footer } from '~/components/Footer';
-import { Button } from '~/components/Button';
 
 const RootLayoutContext = createContext({})
 
@@ -50,21 +49,14 @@ function NavBar({
                     onMouseEnter={() => setLogoHovered(true)}
                     onMouseLeave={() => setLogoHovered(false)}
                 >
-                    <Logomark
-                        className="h-8 hidden"
-                        invert={invert}
-                        filled={logoHovered}
-                    />
-                    <Logo
-                        className="h-8 sm:block"
-                        invert={invert}
-                        filled={logoHovered}
+                    <DevSaLogo
+                        className={clsx(
+                            "w-24 md:w-32 lg:w-36 -ml-5 md:-ml-6 transition",
+                            logoHovered ? "fill-neutral-900" : "fill-neutral-950",
+                        )}
                     />
                 </Link>
-                <div className="flex items-center gap-x-8">
-                    <Button href="/about" invert={invert} className="">
-                        About Us
-                    </Button>           
+                <div className="flex items-center gap-x-8">          
                     <button
                         ref={toggleRef}
                         type="button"
@@ -118,12 +110,12 @@ function Navigation() {
     return (
         <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
             <NavigationRow>
-                <NavigationItem href="/community">Local Community</NavigationItem>
-                <NavigationItem href="/events">Local Events</NavigationItem>
+                <NavigationItem href="/about">About Us</NavigationItem>
+                <NavigationItem href="/events">Events</NavigationItem>
             </NavigationRow>
             <NavigationRow>
                 <NavigationItem href="/tools">Dev Tools</NavigationItem>
-                <NavigationItem href="/store">Dev Store</NavigationItem>
+                <NavigationItem href="/store">Store</NavigationItem>
             </NavigationRow>
         </nav>
     )

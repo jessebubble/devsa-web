@@ -1,7 +1,7 @@
 import { Link } from '@remix-run/react'
 import { Container } from '~/components/Container'
 import { FadeIn } from '~/components/FadeIn'
-import { Logo } from '~/components/Logo'
+import { DevSaLogo } from '~/components/Logo'
 import { socialMediaProfiles } from '~/components/SocialMedia'
 
 const navigation = [
@@ -9,7 +9,7 @@ const navigation = [
     title: 'Start Building',
     links: [
       { title: 'MDX San Antonio', href: '/learn' },
-      { title: 'Lazy Loading', href: '/learn' },
+      { title: 'Codeup', href: '/learn' },
       { title: 'DevMountain', href: '/learn' },
       {
         title: (
@@ -119,12 +119,12 @@ export function Footer() {
                         <NewsletterForm />
                     </div>
                 </div>
-                <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+                <div className="mb-20 mt-24 flex items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12 lg:pt-16">
                     <Link href="/" aria-label="Home">
-                        <Logo className="h-8" fillOnHover />
+                        <DevSaLogo className="w-28 md:w-32 -ml-8 md:-ml-10" />
                     </Link>
                     <p className="text-sm text-neutral-700">
-                        © <span className='text-centroPink'>Not Built With Wordpress</span> {new Date().getFullYear()}
+                        © devSA {new Date().getFullYear()}
                     </p>
                 </div>
             </FadeIn>
