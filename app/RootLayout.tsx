@@ -54,12 +54,7 @@ function NavBar({
                     onMouseLeave={() => setLogoHovered(false)}
                 >
                     <DevSaLogo
-                        className={clsx(
-                            '-ml-3 w-24 transition md:-ml-6 md:w-32 lg:w-36',
-                            logoHovered
-                                ? 'fill-neutral-900'
-                                : 'fill-neutral-950'
-                        )}
+                        className="w-20 md:-ml-6 md:w-32 lg:w-36"
                     />
                 </Link>
                 <div className="flex items-center gap-x-8">
