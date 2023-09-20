@@ -66,7 +66,7 @@ const events = [
     {
         id: 5,
         name: 'DevMountain Housewarming Happy Hour',
-        location: 'Strayer University - 140 NE Loop 410 suite 500',
+        location: 'Strayer University - 40 NE Loop 410 Suite 500',
         meetupUrl:
             'https://devmountain.com/san-antonio-in-person-coding-bootcamp',
         imageUrl: reactImage,
