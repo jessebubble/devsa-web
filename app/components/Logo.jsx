@@ -1,9 +1,7 @@
-import clsx from 'clsx';
 
-export function DevSaLogo({ className, ...props }) {
+export function DevSaLogo({ ...props }) {
     return (
         <svg
-            className={clsx('h-full w-full', className)}
             viewBox="0 0 792 612"
             {...props}
         >
