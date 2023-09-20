@@ -2,31 +2,34 @@ import { Link } from '@remix-run/react';
 import { Container } from '~/components/Container';
 import { FadeIn, FadeInStagger } from '~/components/FadeIn';
 import { SectionIntro } from '~/components/SectionIntro';
-import imageDevSA from '~/components/images/events/devsa.png';
+//import imageDevSA from '~/components/images/events/devsa.png';
+import imageDevSATee from '~/components/images/events/devsa-tee.png';
+import imageDevSAHat from '~/components/images/events/devsa-hat.png';
+import imageDevSAPoster from '~/components/images/events/devsa-poster.png';
 
 const storeItems = [
     {
         href: '/store',
-        imageURL: imageDevSA,
-        title: 'devSA Tee',
+        imageURL: imageDevSATee,
+        title: 'Unisex Garment Dyed Heavyweight Tee',
         description:
-            'Introducing the devSA Tee, a shirt for the modern designer and web developer in San Antonio',
+            'Introducing the devSA Tee, a t-shirt for the modern designer and web developer in San Antonio',
         price: 'Coming Soon',
     },
     {
         href: '/store',
-        imageURL: imageDevSA,
-        title: 'devSA Sticker Pack',
+        imageURL: imageDevSAHat,
+        title: 'Classic Dad Hat',
         description:
-            'Introducing the devSA Sticker Pack, a sticker pack for the modern designer and web developer in San Antonio',
+            'Introducing the devSA hat, a classic dad hat for the modern designer and web developer in San Antonio',
         price: 'Coming Soon',
     },
     {
         href: '/store',
-        imageURL: imageDevSA,
-        title: 'devSA Coffee Mug',
+        imageURL: imageDevSAPoster,
+        title: 'Framed Photo Paper Poster',
         description:
-            'Introducting the devSA Coffee Mug, a coffee mug for the modern designer and web developer in San Antonio',
+            'Introducting the devSA Poster, a poster for the modern designer and web developer in San Antonio',
         price: 'Coming Soon',
     },
 ];
