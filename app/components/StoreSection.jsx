@@ -2,7 +2,7 @@ import { Link } from '@remix-run/react';
 import { Container } from '~/components/Container';
 import { FadeIn, FadeInStagger } from '~/components/FadeIn';
 import { SectionIntro } from '~/components/SectionIntro';
-import imageDevSA from '~/components/images/events/devSA.png';
+import imageDevSA from '~/components/images/events/devsa.png';
 
 const storeItems = [
     {
