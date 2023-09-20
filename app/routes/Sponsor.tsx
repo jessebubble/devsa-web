@@ -1,6 +1,5 @@
 import { useId } from 'react';
 import { Link } from '@remix-run/react';
-
 import { Border } from '~/components/Border';
 import { Button } from '~/components/Button';
 import { Container } from '~/components/Container';
@@ -8,6 +7,7 @@ import { FadeIn } from '~/components/FadeIn';
 import { Support } from '~/components/Meetups';
 import { PageIntro } from '~/components/PageIntro';
 import { SocialMedia } from '~/components/SocialMedia';
+import RootPattern from '~/RootPattern';
 
 function TextInput({ label, ...props }) {
     let id = useId();
@@ -141,6 +141,7 @@ export const metadata = {
 export default function Sponsor() {
     return (
         <>
+            <RootPattern />
             <PageIntro
                 eyebrow="Sponsor us"
                 title="Let's show the tech community that Tech in SA is more than just Military City, USA"

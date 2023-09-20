@@ -2,6 +2,8 @@ import { PageIntro } from "~/components/PageIntro";
 import { StoreSection } from "~/components/StoreSection";
 import { ToolSection } from "~/components/ToolSection";
 import { SponsorSection } from "~/components/SponsorSection";
+import { GridPattern } from "~/components/GridPattern";
+import { DiscordSection } from "~/components/DiscordSection";
 
 export const metadata = {
     title: 'devSA Store',
@@ -11,6 +13,11 @@ export const metadata = {
 export default function Sponsor() {
     return (
         <>
+            <GridPattern
+                className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+                yOffset={-96}
+                interactive
+            />
             <PageIntro
                 eyebrow="Store"
                 title="Coming Soon"
@@ -21,7 +28,8 @@ export default function Sponsor() {
                     agencies, and developers in San Antonio
                 </p>
             </PageIntro>
-
+            
+            <DiscordSection />
             <StoreSection />
             <ToolSection />
             <SponsorSection />
