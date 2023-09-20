@@ -63,18 +63,18 @@ function YouTubeIcon(props) {
 export const socialMediaProfiles = [
     {
         title: 'Discord',
-        href: 'https://www.linkedin.com/in//',
+        href: 'https://discord.gg/f3gnmjScW3',
         icon: DiscordIcon,
     },
     {
         title: 'YouTube',
-        href: 'https://www.linkedin.com/in//',
+        href: 'https://www.youtube.com/channel/UCpuXxlepop5YPXW6YsjQJIQ',
         icon: YouTubeIcon,
     },
 
     {
         title: 'GitHub',
-        href: 'https://github.com/',
+        href: 'https://github.com/devSanAntonio',
         icon: GitHubIcon,
     },
     {
@@ -101,7 +101,7 @@ export function SocialMedia({ className, invert = false }) {
             {socialMediaProfiles.map((socialMediaProfile) => (
                 <li key={socialMediaProfile.title}>
                     <Link
-                        href={socialMediaProfile.href}
+                        to={socialMediaProfile.href}
                         aria-label={socialMediaProfile.title}
                         className={clsx(
                             'transition',

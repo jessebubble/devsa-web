@@ -1,32 +1,25 @@
-import type { V2_MetaFunction } from '@remix-run/node';
-import { PageIntro } from '~/components/PageIntro';
-import { Container } from '~/components/Container';
-import { StatList, StatListItem } from '~/components/StatList';
 import RootPattern from '~/RootPattern';
-import { DiscordSection } from '~/components/DiscordSection';
+import { CalendarSection } from '~/components/CalendarSection';
+import { PageIntro } from '~/components/PageIntro';
+import { SponsorSection } from '~/components/SponsorSection';
 import { ToolSection } from '~/components/ToolSection';
 
-export const meta: V2_MetaFunction = () => {
-    return [
-        { title: 'About Dev San Antonio' },
-        {
-            name: 'About Dev San Antonio',
-            content:
-                'Dev San Antonio aims to be a hub for envisioning the future of design and technology. We showcase the breadth and artistry of web design and development from our San Antonio community.',
-        },
-    ];
+export const metadata = {
+    title: 'Design and Web Developer Events in San Antonio',
+    description:
+        'Stay up-to-date with the latest design and web development events in San Antonio, Texas. Join our community of creatives and technologists who share a common goal: leverage the power of the web to deliver exceptional user experiences',
 };
 
-export default function About() {
+export default function Events() {
     return (
         <>
             <RootPattern />
             <PageIntro
-                eyebrow="About us"
-                title="We are an essential part of the tech ecosystem in SA"
+                eyebrow="Events"
+                title="Building a community for creatives and technologists"
             >
                 <p>
-                    <span className="font-bold text-centroBlue">devSA</span> is
+                    <span className="font-bold text-centroPink">devSA</span> is
                     a community of creatives and technologists who share a
                     common goal: leverage the power of the web to deliver
                     exceptional user experiences
@@ -48,16 +41,13 @@ export default function About() {
                     </p>
                 </div>
             </PageIntro>
-            <Container className="mt-16">
-                <StatList>
-                    <StatListItem value="128" label="Digital Marketers" />
-                    <StatListItem value="432" label="Software Developers" />
-                    <StatListItem value="82" label="iOS Engineers" />
-                </StatList>
-            </Container>
-
-            <DiscordSection />
+            <div className="mt-24 sm:mt-32 lg:mt-40">
+                <div className="mt-16">
+                    <CalendarSection />
+                </div>
+            </div>
             <ToolSection />
+            <SponsorSection />
         </>
     );
 }

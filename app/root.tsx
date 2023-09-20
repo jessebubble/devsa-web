@@ -17,7 +17,7 @@ export const links: LinksFunction = () => [
 
 export default function App() {
     return (
-        <html lang="en" className='h-full bg-neutral-950 text-base antialiased'>
+        <html lang="en" className="h-full bg-neutral-950 text-base antialiased">
             <head>
                 <meta charSet="utf-8" />
                 <meta
@@ -28,7 +28,7 @@ export default function App() {
                 <Meta />
                 <Links />
             </head>
-            <body className='flex min-h-full flex-col'>
+            <body className="flex min-h-full flex-col">
                 <RootLayout>
                     <Outlet />
                     <ScrollRestoration />

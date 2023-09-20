@@ -1,16 +1,18 @@
 import clsx from 'clsx';
 
 export function DevSaLogo({ className, ...props }) {
-
     return (
         <svg
-            className={clsx("w-full h-full", className)}
+            className={clsx('h-full w-full', className)}
             viewBox="0 0 792 612"
             {...props}
         >
-            <style>{".st3{fill:#eee}"}</style>
+            <style>{'.st3{fill:#eee}'}</style>
             <path d="M213.6 222.4h364.8v205.2c0 8.4-6.8 15.2-15.2 15.2H228.8c-8.4 0-15.2-6.8-15.2-15.2V222.4z" />
-            <path fill="#ef436f" d="M337.7 169.2H454.2V214.79999999999998H337.7z" />
+            <path
+                fill="#ef436f"
+                d="M337.7 169.2H454.2V214.79999999999998H337.7z"
+            />
             <path
                 d="M330.1 169.2H228.8c-8.4 0-15.2 6.8-15.2 15.2v30.4h116.5v-45.6z"
                 fill="#00b1a9"
@@ -30,9 +32,8 @@ export function DevSaLogo({ className, ...props }) {
                 fontSize="80px"
                 fontFamily="Poppins-Black"
             >
-                {"SA"}
+                {'SA'}
             </text>
         </svg>
-    )
+    );
 }
-

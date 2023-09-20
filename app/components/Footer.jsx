@@ -1,112 +1,118 @@
-import { Link } from '@remix-run/react'
-import { Container } from '~/components/Container'
-import { FadeIn } from '~/components/FadeIn'
-import { DevSaLogo } from '~/components/Logo'
-import { socialMediaProfiles } from '~/components/SocialMedia'
+import { Link } from '@remix-run/react';
+import { Container } from '~/components/Container';
+import { FadeIn } from '~/components/FadeIn';
+import { DevSaLogo } from '~/components/Logo';
+import { socialMediaProfiles } from '~/components/SocialMedia';
 
 const navigation = [
-  {
-    title: 'Start Building',
-    links: [
-      { title: 'MDX San Antonio', href: '/learn' },
-      { title: 'Codeup', href: '/learn' },
-      { title: 'DevMountain', href: '/learn' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/learn',
-      },
-    ],
-  },
-  {
-    title: 'Community',
-    links: [
-      { title: 'About', href: '/about' },
-      { title: 'Events', href: '/events' },
-      { title: 'Sponsor an event', href: '/about' },
-      { title: 'Speak at an event', href: '/about' },
-    ],
-  },
-  {
-    title: 'Connect',
-    links: socialMediaProfiles,
-  },
-]
+    {
+        title: 'Start Building',
+        links: [
+            { title: 'MDX San Antonio', href: 'https://mdx-satx.vercel.app/' },
+            {
+                title: 'DevMountain',
+                href: 'https://devmountain.com/learn-to-code-in-person-your-favorite-instructor?utm_source=jesse-hernandez&utm_medium=social-email&utm_campaign=og-in-person-san-antonio',
+            },
+            {
+                title: 'Codeup',
+                href: 'https://codeup.edu/program/full-stack-web-development/',
+            },
+            {
+                title: (
+                    <>
+                        See all <span aria-hidden="true">&rarr;</span>
+                    </>
+                ),
+                href: '/https://mdx-satx.vercel.app/',
+            },
+        ],
+    },
+    {
+        title: 'Community',
+        links: [
+            { title: 'About', href: '/about' },
+            { title: 'Events', href: '/events' },
+            { title: 'Sponsor an event', href: '/events' },
+            { title: 'Speak at an event', href: '/events' },
+        ],
+    },
+    {
+        title: 'Connect',
+        links: socialMediaProfiles,
+    },
+];
 
 function Navigation() {
-  return (
-    <nav>
-      <ul className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-        {navigation.map((section) => (
-          <li key={section.title}>
-            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-              {section.title}
-            </div>
-            <ul className="mt-4 text-sm text-neutral-700">
-              {section.links.map((link) => (
-                <li key={link.title} className="mt-4">
-                  <Link
-                    href={link.href}
-                    className="transition hover:text-neutral-950"
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
+    return (
+        <nav>
+            <ul className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                {navigation.map((section) => (
+                    <li key={section.title}>
+                        <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+                            {section.title}
+                        </div>
+                        <ul className="mt-4 text-sm text-neutral-700">
+                            {section.links.map((link) => (
+                                <li key={link.title} className="mt-4">
+                                    <Link
+                                        to={link.href}
+                                        className="transition hover:text-neutral-950"
+                                    >
+                                        {link.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
+                ))}
             </ul>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  )
+        </nav>
+    );
 }
 
 function ArrowIcon(props) {
-  return (
-    <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
-      <path
-        fill="currentColor"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 3 10 .5v2H0v1h10v2L16 3Z"
-      />
-    </svg>
-  )
+    return (
+        <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
+            <path
+                fill="currentColor"
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M16 3 10 .5v2H0v1h10v2L16 3Z"
+            />
+        </svg>
+    );
 }
 
 function NewsletterForm() {
-  return (
-    <form className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
-      </h2>
-      <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest community news, events, resources and
-        inspiration.
-      </p>
-      <div className="relative mt-6">
-        <input
-          type="email"
-          placeholder="Email address"
-          autoComplete="email"
-          aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
-        />
-        <div className="absolute inset-y-1 right-1 flex justify-end">
-          <button
-            type="submit"
-            aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
-          >
-            <ArrowIcon className="w-4" />
-          </button>
-        </div>
-      </div>
-    </form>
-  )
+    return (
+        <form className="max-w-sm">
+            <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+                Sign up for our newsletter
+            </h2>
+            <p className="mt-4 text-sm text-neutral-700">
+                Subscribe to get the latest community news, events, resources
+                and inspiration.
+            </p>
+            <div className="relative mt-6">
+                <input
+                    type="email"
+                    placeholder="Email address"
+                    autoComplete="email"
+                    aria-label="Email address"
+                    className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
+                />
+                <div className="absolute inset-y-1 right-1 flex justify-end">
+                    <button
+                        type="submit"
+                        aria-label="Submit"
+                        className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
+                    >
+                        <ArrowIcon className="w-4" />
+                    </button>
+                </div>
+            </div>
+        </form>
+    );
 }
 
 export function Footer() {
@@ -121,7 +127,7 @@ export function Footer() {
                 </div>
                 <div className="mb-20 mt-24 flex items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12 lg:pt-16">
                     <Link href="/" aria-label="Home">
-                        <DevSaLogo className="w-28 md:w-32 -ml-8 md:-ml-10" />
+                        <DevSaLogo className="-ml-8 w-28 md:-ml-10 md:w-32" />
                     </Link>
                     <p className="text-sm text-neutral-700">
                         © devSA {new Date().getFullYear()}
@@ -129,5 +135,5 @@ export function Footer() {
                 </div>
             </FadeIn>
         </Container>
-    )
+    );
 }

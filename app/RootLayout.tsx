@@ -1,8 +1,12 @@
+import { Link, useFetcher } from '@remix-run/react';
 import {
-    Link,
-    useFetcher,
-} from '@remix-run/react';
-import { createContext, useContext, useEffect, useId, useRef, useState } from 'react';
+    createContext,
+    useContext,
+    useEffect,
+    useId,
+    useRef,
+    useState,
+} from 'react';
 import clsx from 'clsx';
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
 import { Container } from '~/components/Container';
@@ -11,7 +15,7 @@ import { Meetups } from '~/components/Meetups';
 import { SocialMedia } from '~/components/SocialMedia';
 import { Footer } from '~/components/Footer';
 
-const RootLayoutContext = createContext({})
+const RootLayoutContext = createContext({});
 
 function XIcon(props) {
     return (
@@ -19,15 +23,15 @@ function XIcon(props) {
             <path d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z" />
             <path d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z" />
         </svg>
-    )
+    );
 }
-  
+
 function MenuIcon(props) {
     return (
         <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
             <path d="M2 6h20v2H2zM2 16h20v2H2z" />
         </svg>
-    )
+    );
 }
 
 function NavBar({
@@ -43,7 +47,7 @@ function NavBar({
     return (
         <Container className="">
             <div className="flex items-center justify-between">
-                <Link 
+                <Link
                     to="/"
                     aria-label="Home"
                     onMouseEnter={() => setLogoHovered(true)}
@@ -51,12 +55,14 @@ function NavBar({
                 >
                     <DevSaLogo
                         className={clsx(
-                            "w-24 md:w-32 lg:w-36 -ml-5 md:-ml-6 transition",
-                            logoHovered ? "fill-neutral-900" : "fill-neutral-950",
+                            '-ml-3 w-24 transition md:-ml-6 md:w-32 lg:w-36',
+                            logoHovered
+                                ? 'fill-neutral-900'
+                                : 'fill-neutral-950'
                         )}
                     />
                 </Link>
-                <div className="flex items-center gap-x-8">          
+                <div className="flex items-center gap-x-8">
                     <button
                         ref={toggleRef}
                         type="button"
@@ -64,34 +70,38 @@ function NavBar({
                         aria-expanded={expanded.toString()}
                         aria-controls={panelId}
                         className={clsx(
-                            "group -m-2.5 rounded-full p-2.5 transition",
-                            invert ? "hover:bg-white/10" : "hover:bg-neutral-950/10"
+                            'group -m-2.5 rounded-full p-2.5 transition',
+                            invert
+                                ? 'hover:bg-white/10'
+                                : 'hover:bg-neutral-950/10'
                         )}
                         aria-label="Toggle navigation"
                     >
                         <Icon
                             className={clsx(
-                                "w-6 h-6",
+                                'h-6 w-6',
                                 invert
-                                    ? "fill-white group-hover:fill-neutral-200" 
-                                    : "fill-neutral-950 group-hover:fll-neutral-700"
+                                    ? 'fill-white group-hover:fill-neutral-200'
+                                    : 'group-hover:fll-neutral-700 fill-neutral-950'
                             )}
                         />
                     </button>
-                </div>        
+                </div>
             </div>
         </Container>
-    )
+    );
 }
 
 function NavigationRow({ children }) {
     return (
         <div className="even:mt-px sm:bg-neutral-950">
             <Container className="">
-                <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2">
+                    {children}
+                </div>
             </Container>
         </div>
-    )
+    );
 }
 
 function NavigationItem({ href, children }) {
@@ -103,48 +113,50 @@ function NavigationItem({ href, children }) {
             {children}
             <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
         </Link>
-    )
+    );
 }
 
 function Navigation() {
     return (
-        <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+        <nav className="font-display mt-px text-5xl font-medium tracking-tight text-white">
             <NavigationRow>
                 <NavigationItem href="/about">About Us</NavigationItem>
                 <NavigationItem href="/events">Events</NavigationItem>
             </NavigationRow>
             <NavigationRow>
-                <NavigationItem href="/tools">Dev Tools</NavigationItem>
+                <NavigationItem href="/sponsor">Sponsor Us</NavigationItem>
                 <NavigationItem href="/store">Store</NavigationItem>
             </NavigationRow>
         </nav>
-    )
+    );
 }
 
 function RootLayoutInner({ children }) {
-    let panelId = useId()
-    let [expanded, setExpanded] = useState(false)
-    let openRef = useRef()
-    let closeRef = useRef()
-    let navRef = useRef()
-    let shouldReduceMotion = useReducedMotion()
-  
+    let panelId = useId();
+    let [expanded, setExpanded] = useState(false);
+    let openRef = useRef();
+    let closeRef = useRef();
+    let navRef = useRef();
+    let shouldReduceMotion = useReducedMotion();
+
     useEffect(() => {
         function onClick(event) {
             if (event.target.closest('a')?.href === window.location.href) {
-                setExpanded(false)
+                setExpanded(false);
             }
         }
-  
-        window.addEventListener('click', onClick)
-  
+
+        window.addEventListener('click', onClick);
+
         return () => {
-            window.removeEventListener('click', onClick)
-        }
-    }, [])
-  
+            window.removeEventListener('click', onClick);
+        };
+    }, []);
+
     return (
-        <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
+        <MotionConfig
+            transition={shouldReduceMotion ? { duration: 0 } : undefined}
+        >
             <header>
                 <div
                     className="absolute left-0 right-0 top-2 z-40 pt-14"
@@ -157,14 +169,17 @@ function RootLayoutInner({ children }) {
                         toggleRef={openRef}
                         expanded={expanded}
                         onToggle={() => {
-                            setExpanded((expanded) => !expanded)
-                            window.setTimeout(() =>
-                            closeRef.current?.focus({ preventScroll: true })
-                            )
+                            setExpanded((expanded) => !expanded);
+                            window.setTimeout(
+                                () =>
+                                    closeRef.current?.focus({
+                                        preventScroll: true,
+                                    })
+                            );
                         }}
                     />
                 </div>
-    
+
                 <motion.div
                     layout
                     id={panelId}
@@ -174,7 +189,10 @@ function RootLayoutInner({ children }) {
                     inert={expanded ? undefined : ''}
                 >
                     <motion.div layout className="bg-neutral-800">
-                        <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
+                        <div
+                            ref={navRef}
+                            className="bg-neutral-950 pb-16 pt-14"
+                        >
                             <NavBar
                                 invert
                                 panelId={panelId}
@@ -182,10 +200,13 @@ function RootLayoutInner({ children }) {
                                 toggleRef={closeRef}
                                 expanded={expanded}
                                 onToggle={() => {
-                                    setExpanded((expanded) => !expanded)
-                                    window.setTimeout(() =>
-                                    openRef.current?.focus({ preventScroll: true })
-                                    )
+                                    setExpanded((expanded) => !expanded);
+                                    window.setTimeout(
+                                        () =>
+                                            openRef.current?.focus({
+                                                preventScroll: true,
+                                            })
+                                    );
                                 }}
                             />
                         </div>
@@ -214,7 +235,7 @@ function RootLayoutInner({ children }) {
                     </motion.div>
                 </motion.div>
             </header>
-    
+
             <motion.div
                 layout
                 style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
@@ -225,21 +246,21 @@ function RootLayoutInner({ children }) {
                     className="relative isolate flex w-full flex-col pt-9"
                 >
                     <main className="w-full flex-auto">{children}</main>
-                    
+
                     <Footer />
                 </motion.div>
             </motion.div>
         </MotionConfig>
-    )
+    );
 }
 
 export function RootLayout({ children }) {
-    let pathname = useFetcher()
+    let pathname = useFetcher();
     let [logoHovered, setLogoHovered] = useState(false);
 
     return (
         <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
             <RootLayoutInner key={`${pathname}`}>{children}</RootLayoutInner>
         </RootLayoutContext.Provider>
-    )
+    );
 }
