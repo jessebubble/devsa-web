@@ -32,8 +32,8 @@ const navigation = [
         links: [
             { title: 'About', href: '/about' },
             { title: 'Events', href: '/events' },
-            { title: 'Sponsor an event', href: '/events' },
-            { title: 'Speak at an event', href: '/events' },
+            { title: 'Sponsor an event', href: '/sponsor' },
+            { title: 'Speak at an event', href: '/sponsor' },
         ],
     },
     {
