@@ -6,6 +6,8 @@ import { socialMediaProfiles } from '~/components/SocialMedia';
 
 function NewsletterForm() {
     const fetcher = useFetcher();
+    const isSubmitting = fetcher.state === 'submitting';
+    const isSuccess = fetcher.state === 'success';
 
     return (
         <fetcher.Form method="post" action="/send" className="max-w-sm">
@@ -20,7 +22,7 @@ function NewsletterForm() {
                 <input
                     type="email"
                     name="email"
-                    placeholder="Email address"
+                    placeholder="Enter your email"
                     autoComplete="email"
                     aria-label="Email address"
                     className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
@@ -31,8 +33,8 @@ function NewsletterForm() {
                         aria-label="Submit"
                         className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
                     >
-                        <ArrowIcon className="w-4" />
-                    </button>
+                        {isSubmitting ? <CheckIcon className="w-4 text-centroGreen font-bold" /> : <ArrowIcon className="w-4" />}
+                    </button>          
                 </div>
             </div>
         </fetcher.Form>
@@ -113,6 +115,19 @@ function ArrowIcon(props) {
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M16 3 10 .5v2H0v1h10v2L16 3Z"
+            />
+        </svg>
+    );
+}
+
+function CheckIcon(props) {
+    return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+            <path
+                fill="currentColor"
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
             />
         </svg>
     );

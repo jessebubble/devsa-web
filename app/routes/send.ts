@@ -84,5 +84,20 @@ export async function action({ request }: ActionArgs) {
         console.log(error);
         return json({ error: "Something went wrong" }, 400);
     }
-
 }
+
+/* export const loader = async () => {
+    try {
+      const data = await resend.emails.send({
+        from: 'devSA <onboarding@resend.dev>',
+        to: ['jesseovr@gmail.com'],
+        subject: 'Hello world',
+        html: '<strong>Thank you for subscribing!</strong>',
+      });
+  
+      return json(data, 200);
+    }
+    catch (error) {
+      return json({ error }, 400);
+    }
+  }; */

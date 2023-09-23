@@ -46,6 +46,7 @@ function RadioInput({ label, ...props }) {
 
 function SponsorForm() {
     const fetcher = useFetcher();
+    const isSubmitting = fetcher.state === 'submitting';    
 
     return (
         <FadeIn className="lg:order-last">
@@ -78,8 +79,8 @@ function SponsorForm() {
                     <TextInput label="Message" name="message" />
                 </div>
                 <Button type="submit" className="mt-10" invert={false} >
-                    Let's build together
-                </Button>
+                    {isSubmitting ? 'Sending...' : "Let's build together"}
+                </Button>          
             </fetcher.Form>
         </FadeIn>
     );
