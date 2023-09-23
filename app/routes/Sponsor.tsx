@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { Link } from '@remix-run/react';
+import { Link, useFetcher } from '@remix-run/react';
 import { Border } from '~/components/Border';
 import { Button } from '~/components/Button';
 import { Container } from '~/components/Container';
@@ -45,9 +45,14 @@ function RadioInput({ label, ...props }) {
 }
 
 function SponsorForm() {
+    const fetcher = useFetcher();
+
     return (
         <FadeIn className="lg:order-last">
-            <form>
+            <fetcher.Form 
+                method="post"
+                action="/send"
+            >
                 <h2 className="font-display text-base font-semibold text-neutral-950">
                     Sponsor inquiries
                 </h2>
@@ -75,7 +80,7 @@ function SponsorForm() {
                 <Button type="submit" className="mt-10" invert={false} >
                     Let's build together
                 </Button>
-            </form>
+            </fetcher.Form>
         </FadeIn>
     );
 }
