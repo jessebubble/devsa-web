@@ -21,7 +21,7 @@ export function DiscordSection() {
                     to deliver exceptional user experiences. Come say hello and
                     join our official{' '}
                     <Link
-                        to="https://discord.gg/CXzpTUd9"
+                        to="https://discord.gg/f3gnmjScW3"
                         className="text-centroPink"
                     >
                         discord server

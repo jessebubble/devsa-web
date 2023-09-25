@@ -7,7 +7,6 @@ import { socialMediaProfiles } from '~/components/SocialMedia';
 function NewsletterForm() {
     const fetcher = useFetcher();
     const isSubmitting = fetcher.state === 'submitting';
-    const isSuccess = fetcher.state === 'success';
 
     return (
         <fetcher.Form method="post" action="/send" className="max-w-sm">
