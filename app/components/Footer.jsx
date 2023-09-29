@@ -69,7 +69,7 @@ const navigation = [
             { title: 'About', href: '/about' },
             { title: 'Events', href: '/events' },
             { title: 'Sponsor an event', href: '/sponsor' },
-            { title: 'Speak at an event', href: '/sponsor' },
+            { title: 'The devSA shop ', href: '/shop' },
         ],
     },
     {

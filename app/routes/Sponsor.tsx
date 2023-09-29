@@ -150,10 +150,10 @@ export default function Sponsor() {
             <RootPattern />
             <PageIntro
                 eyebrow="Sponsor us"
-                title="Let's show the tech community that Tech in SA is more than just Military City, USA"
+                title="Building a community one event at a time"
             >
                 <p>
-                    <span className="text-centroPink">Our goal is simple</span>,
+                    <span className="text-centroPink font-semibold">Our goal is simple</span>,
                     create a platform that connects designers, marketing
                     agencies, mobile, web, and cloud developers in San Antonio.
                     The devSA platform creates an opportunity to ask for help,

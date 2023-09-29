@@ -120,7 +120,7 @@ function Navigation() {
             </NavigationRow>
             <NavigationRow>
                 <NavigationItem href="/sponsor">Sponsor</NavigationItem>
-                <NavigationItem href="/store">Store</NavigationItem>
+                <NavigationItem href="/shop">Shop</NavigationItem>
             </NavigationRow>
         </nav>
     );

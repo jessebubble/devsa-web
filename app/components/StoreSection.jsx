@@ -2,19 +2,18 @@ import { Link } from '@remix-run/react';
 import { Container } from '~/components/Container';
 import { FadeIn, FadeInStagger } from '~/components/FadeIn';
 import { SectionIntro } from '~/components/SectionIntro';
-//import imageDevSA from '~/components/images/events/devsa.png';
 import imageDevSATee from '~/components/images/events/devsa-tee.png';
 import imageDevSAHat from '~/components/images/events/devsa-hat.png';
-import imageDevSAPoster from '~/components/images/events/devsa-poster.png';
+import imageDevSADrink from '~/components/images/events/devsa-drink.png';
 
 const storeItems = [
     {
         href: '/store',
         imageURL: imageDevSATee,
-        title: 'Unisex Garment Dyed Heavyweight Tee',
+        title: 'Unisex Heavyweight Tee',
         description:
             'Introducing the devSA Tee, a t-shirt for the modern designer and web developer in San Antonio',
-        price: 'Coming Soon',
+        price: '$24.99',
     },
     {
         href: '/store',
@@ -22,15 +21,15 @@ const storeItems = [
         title: 'Classic Dad Hat',
         description:
             'Introducing the devSA hat, a classic dad hat for the modern designer and web developer in San Antonio',
-        price: 'Coming Soon',
+        price: '$24.99',
     },
     {
         href: '/store',
-        imageURL: imageDevSAPoster,
-        title: 'Framed Photo Paper Poster',
+        imageURL: imageDevSADrink,
+        title: 'Shaker Pint Glass',
         description:
-            'Introducting the devSA Poster, a poster for the modern designer and web developer in San Antonio',
-        price: 'Coming Soon',
+            'Introducing the devSA pint glass, a shaker pint glass for the modern designer and web developer in San Antonio',
+        price: '$18.99',
     },
 ];
 
