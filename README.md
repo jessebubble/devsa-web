@@ -36,3 +36,5 @@ But mostly this:
 ## Thank you for your support
 
 We're excited to see what the future holds for this community and we hope you'll join us on this journey.
+
+Come say hello and join us on [Discord](https://discord.gg/f3gnmjScW3) to stay up to date with the latest news and events.
