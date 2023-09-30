@@ -8,7 +8,7 @@ import imageDevSADrink from '~/components/images/events/devsa-drink.png';
 
 const storeItems = [
     {
-        href: '/store',
+        href: '/shop',
         imageURL: imageDevSATee,
         title: 'Unisex Heavyweight Tee',
         description:
@@ -16,7 +16,7 @@ const storeItems = [
         price: '$24.99',
     },
     {
-        href: '/store',
+        href: '/shop',
         imageURL: imageDevSAHat,
         title: 'Classic Dad Hat',
         description:
@@ -24,7 +24,7 @@ const storeItems = [
         price: '$24.99',
     },
     {
-        href: '/store',
+        href: '/shop',
         imageURL: imageDevSADrink,
         title: 'Shaker Pint Glass',
         description:
