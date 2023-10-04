@@ -115,12 +115,12 @@ function Navigation() {
     return (
         <nav className="font-display mt-px text-5xl font-medium tracking-tight text-white">
             <NavigationRow>
-                <NavigationItem href="/about">About</NavigationItem>
-                <NavigationItem href="/events">Events</NavigationItem>
+                <NavigationItem href="/about">About devSA</NavigationItem>
+                <NavigationItem href="/events">Local Meetups</NavigationItem>
             </NavigationRow>
             <NavigationRow>
-                <NavigationItem href="/sponsor">Sponsor</NavigationItem>
-                <NavigationItem href="/shop">Shop</NavigationItem>
+                <NavigationItem href="/sponsor">Sponsor an event</NavigationItem>
+                <NavigationItem href="/shop">The devSA Shop</NavigationItem>
             </NavigationRow>
         </nav>
     );
