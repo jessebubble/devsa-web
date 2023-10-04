@@ -42,16 +42,16 @@ function NewsletterForm() {
 
 const navigation = [
     {
-        title: 'Start Building',
+        title: 'Social Media',
         links: [
-            { title: 'MDX San Antonio', href: 'https://mdx-satx.vercel.app/' },
+            { title: 'Twitter', href: 'https://twitter.com' },
             {
-                title: 'DevMountain',
-                href: 'https://devmountain.com/learn-to-code-in-person-your-favorite-instructor?utm_source=jesse-hernandez&utm_medium=social-email&utm_campaign=og-in-person-san-antonio',
+                title: 'Instagram',
+                href: 'https://instagram.com',
             },
             {
-                title: 'Codeup',
-                href: 'https://codeup.edu/program/full-stack-web-development/',
+                title: 'TikTok',
+                href: 'https://tiktok.com',
             },
             {
                 title: (
@@ -59,21 +59,22 @@ const navigation = [
                         See all <span aria-hidden="true">&rarr;</span>
                     </>
                 ),
-                href: '/https://mdx-satx.vercel.app/',
+                href: '/',
             },
         ],
     },
     {
-        title: 'Community',
+        title: 'Site Navigation',
         links: [
-            { title: 'About', href: '/about' },
-            { title: 'Events', href: '/events' },
+            { title: 'Home Page', href: '/' },
+            { title: 'About devSA', href: '/about' },
+            { title: 'Local Meetups', href: '/events' },
             { title: 'Sponsor an event', href: '/sponsor' },
             { title: 'The devSA shop ', href: '/shop' },
         ],
     },
     {
-        title: 'Connect',
+        title: "Let's build together",
         links: socialMediaProfiles,
     },
 ];
