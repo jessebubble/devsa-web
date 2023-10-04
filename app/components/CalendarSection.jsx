@@ -108,7 +108,7 @@ export function CalendarSection() {
         <>
             <SectionIntro
                 title="Get inspired by the work of others in the community"
-                className="mt-24"
+                className="mt-24 sm:mt-32 lg:mt-40"
             >
                 <p>
                     As our platform grows, our goal is to expand the events
@@ -118,9 +118,9 @@ export function CalendarSection() {
                     development for users in San Antonio and beyond
                 </p>
             </SectionIntro>
-            <Container className="">
+            <Container className="mt-16">
                 <FadeIn>
-                    <div className="mt-24 rounded-3xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+                    <div className="rounded-3xl bg-neutral-950 py-24 lg:py-32">
                         <div className="mx-auto max-w-md px-4 sm:px-7 md:max-w-4xl md:px-6">
                             <div className="md:grid md:grid-cols-2 md:divide-x md:divide-neutral-200">
                                 <div className="md:pr-14">
