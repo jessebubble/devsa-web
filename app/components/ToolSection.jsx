@@ -35,7 +35,7 @@ export function ToolSection() {
             <FadeIn>
                 <h2 className="font-display text-2xl font-semibold text-neutral-950">
                     Leveraging the power of our{' '}
-                    <span className="font-bold text-centroPink">
+                    <span className="text-spursPink">
                         tech community
                     </span>
                 </h2>

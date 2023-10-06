@@ -96,7 +96,7 @@ function SponsorDetails() {
                 We are looking for <span className='text-centroPink'>food and drink sponsors</span> to help us fuel and maintain a community for
                 designers and web developers in San Antonio, Texas. Join our
                 community of creatives and technologists who share a common
-                goal: leverage the power of the web to deliver exceptional user
+                goal, leverage the power of the web to deliver exceptional user
                 experiences
             </p>
 
@@ -150,15 +150,11 @@ export default function Sponsor() {
             <RootPattern />
             <PageIntro
                 eyebrow="Sponsor us"
-                title="Building a community one event at a time"
+                title="We appreciate your support and generosity"
             >
                 <p>
-                    <span className="text-centroPink font-semibold">Our goal is simple</span>,
-                    create a platform that connects designers, marketing
-                    agencies, mobile, web, and cloud developers in San Antonio.
-                    The devSA platform creates an opportunity to ask for help,
-                    share your work, and get inspired by the work of others in
-                    the community
+                    <span className="text-centroPink">Our goal is simple</span>,
+                    connect designers, marketing agencies, web developers, mobile, data and cloud engineers in San Antonio, Texas through the various tools, resources and events we host and sponsor throughout the year
                 </p>
             </PageIntro>
 

@@ -23,38 +23,23 @@ export default function About() {
             <RootPattern />
             <PageIntro
                 eyebrow="About us"
-                title="We are an essential part of the tech ecosystem in SA"
+                title="We are a community of creatives and technologists"
             >
                 <p>
-                    <span className="font-bold text-centroBlue">devSA</span> is
-                    a community of creatives and technologists who share a
-                    common goal: leverage the power of the web to deliver
-                    exceptional user experiences
+                    Let's leverage the power of the web to solve problems and deliver exceptional user experiences
+                    
                 </p>
                 <div className="mt-10 max-w-2xl space-y-6 text-base">
                     <p>
-                        Our goal is to create a platform that connects
-                        designers, marketing agencies, mobile, web, and cloud
-                        developers in San Antonio. The devSA platform creates an
-                        opportunity to ask for help, share your work, and get
-                        inspired by the work of others in the community
+                        We aim to connect designers, marketing agencies, web developers, mobile, data and cloud
+                        engineers in San Antonio through the various tools, resources and events we host and sponsor throughout the year 
+
                     </p>
                     <p>
-                        As our platform grows, our goal is to expand the events
-                        space and fully utilize the power of the web. We want to
-                        facilitate discussions on the tools, techniques, and
-                        technologies that are shaping the future of design and
-                        development for users in San Antonio and beyond
+                        Once connected, our platform creates an opportunity to leverage the power of our community to ask for help, share your work, and get inspired by the work of others in the community
                     </p>
                 </div>
             </PageIntro>
-            <Container className="mt-16">
-                <StatList>
-                    <StatListItem value="128" label="Digital Marketers" />
-                    <StatListItem value="432" label="Software Developers" />
-                    <StatListItem value="82" label="iOS Engineers" />
-                </StatList>
-            </Container>
 
             <DiscordSection />
             <ToolSection />

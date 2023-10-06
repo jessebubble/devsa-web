@@ -16,28 +16,20 @@ export default function Events() {
             <RootPattern />
             <PageIntro
                 eyebrow="Events"
-                title="Building a community for creatives and technologists"
+                title="Let's build together, one event at a time"
             >
                 <p>
-                    <span className="font-bold text-centroPink">devSA</span> is
+                    <span className="text-spursPink">devSA</span> is
                     a community of creatives and technologists who share a
-                    common goal: leverage the power of the web to deliver
+                    common goal, leverage the power of the web to deliver
                     exceptional user experiences
                 </p>
                 <div className="mt-10 max-w-2xl space-y-6 text-base">
                     <p>
-                        Our goal is to create a platform that connects
-                        designers, marketing agencies, mobile, web, and cloud
-                        developers in San Antonio. The devSA platform creates an
-                        opportunity to ask for help, share your work, and get
-                        inspired by the work of others in the community
+                        As our platform expands, our goal is to grow the events space and harness the full power of the web to showcase the wide range and creativity of web design and development within our San Antonio community
                     </p>
                     <p>
-                        As our platform grows, our goal is to expand the events
-                        space and fully utilize the power of the web. We want to
-                        facilitate discussions on the tools, techniques, and
-                        technologies that are shaping the future of design and
-                        development for users in San Antonio and beyond
+                        Join us in person, on Twitch, or on YouTube. We are always looking for new ways to connect and share the work and knowledge of our community in San Antonio
                     </p>
                 </div>
             </PageIntro>

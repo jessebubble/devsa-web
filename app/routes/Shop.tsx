@@ -25,7 +25,7 @@ export default function Sponsor() {
                 title="Where tradition meets innovation"
             >
                 <p>
-                    <span className="text-centroPink font-semibold">The devSA shop</span> celebrates the rich, Mexican-inspired culture and storied history of San Antonio by incorporating vibrant colors, captivating motifs, and authentic elements into every theme and design
+                    <span className="text-centroPink">The devSA shop</span> celebrates the rich, Mexican-inspired culture and storied history of San Antonio by incorporating vibrant colors, captivating motifs, and authentic elements into every theme and design
                 </p>
                 <Button
                     className="mt-8"
