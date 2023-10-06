@@ -26,7 +26,7 @@ export default function About() {
                 title="We are a community of creatives and technologists"
             >
                 <p>
-                    Let's leverage the power of the web to solve problems and deliver exceptional user experiences
+                    Leverage the power of the web to solve problems and deliver exceptional user experiences, it's what we do
                     
                 </p>
                 <div className="mt-10 max-w-2xl space-y-6 text-base">

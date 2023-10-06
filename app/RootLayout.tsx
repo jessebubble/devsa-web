@@ -14,6 +14,8 @@ import { DevSaLogo } from '~/components/Logo';
 import { Meetups } from '~/components/Meetups';
 import { SocialMedia } from '~/components/SocialMedia';
 import { Footer } from '~/components/Footer';
+import { Button } from '~/components/Button';
+import { ShoppingCartIcon } from '@heroicons/react/20/solid';
 
 const RootLayoutContext = createContext({});
 
@@ -54,10 +56,20 @@ function NavBar({
                     onMouseLeave={() => setLogoHovered(false)}
                 >
                     <DevSaLogo
-                        className="w-28 -ml-5 md:-ml-6 md:w-32 lg:w-36"
+                        className="-ml-5 md:-ml-6 w-28 md:w-32 lg:w-36"
                     />
                 </Link>
                 <div className="flex items-center gap-x-8">
+                    <Button href="/shop" invert={invert}>
+                        <ShoppingCartIcon
+                            className={clsx(
+                                'h-6 w-6',
+                                invert
+                                    ? 'fill-neutral-950 group-hover:fill-neutral-700'
+                                    : 'group-hover:fll-neutral-200 fill-white'
+                            )}  
+                        />
+                    </Button>
                     <button
                         ref={toggleRef}
                         type="button"
@@ -115,8 +127,8 @@ function Navigation() {
     return (
         <nav className="font-display mt-px text-5xl font-medium tracking-tight text-white">
             <NavigationRow>
-                <NavigationItem href="/about">What's the point</NavigationItem>
-                <NavigationItem href="/events">Let's build together</NavigationItem>
+                <NavigationItem href="/about">What we do</NavigationItem>
+                <NavigationItem href="/events">Events in SA</NavigationItem>
             </NavigationRow>
             <NavigationRow>
                 <NavigationItem href="/sponsor">Sponsor an event</NavigationItem>
@@ -211,7 +223,7 @@ function RootLayoutInner({ children }) {
                                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                                     <div>
                                         <h2 className="font-display text-base font-semibold text-white">
-                                            Start building for the modern web
+                                            Build for the community
                                         </h2>
                                         <Meetups
                                             invert

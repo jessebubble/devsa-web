@@ -93,34 +93,30 @@ function SponsorDetails() {
                 Sponsor an event
             </h2>
             <p className="mt-6 text-base text-neutral-600">
-                We are looking for <span className='text-centroPink'>food and drink sponsors</span> to help us fuel and maintain a community for
-                designers and web developers in San Antonio, Texas. Join our
-                community of creatives and technologists who share a common
-                goal, leverage the power of the web to deliver exceptional user
-                experiences
+                If you are interested in sponsoring an event, please reach out to us and we will get back to you as soon as possible with more information about our sponsorship packages and opportunities
             </p>
 
             <Support className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
 
             <Border className="mt-16 pt-16">
                 <h2 className="font-display text-base font-semibold text-neutral-950">
-                    Speak at an event
+                    Build for the community
                 </h2>
                 <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
                     {[
-                        ['Send an email', 'jesseovr@gmail.com'],
-                        ['Share request on discord', 'discord.gg/devSA'],
-                    ].map(([label, email]) => (
-                        <div key={email}>
+                        ['devSA YouTube', 'youtube.com/devSATX'],
+                        ['devSA Twitch', 'twitch.tv/devSATX'],
+                    ].map(([label, build]) => (
+                        <div key={label}>
                             <dt className="font-semibold text-neutral-950">
                                 {label}
                             </dt>
                             <dd>
                                 <Link
-                                    to={`mailto:${email}`}
+                                    to="/build"
                                     className="text-neutral-600 hover:text-neutral-950"
                                 >
-                                    {email}
+                                    {build}
                                 </Link>
                             </dd>
                         </div>
@@ -153,8 +149,8 @@ export default function Sponsor() {
                 title="We appreciate your support and generosity"
             >
                 <p>
-                    <span className="text-centroPink">Our goal is simple</span>,
-                    connect designers, marketing agencies, web developers, mobile, data and cloud engineers in San Antonio, Texas through the various tools, resources and events we host and sponsor throughout the year
+                    Thank you for your interest in sponsoring an event. 
+                    We are constantly seeking sponsors to assist us in creating an inclusive, accessible, and welcoming in-person experience for everyone
                 </p>
             </PageIntro>
 

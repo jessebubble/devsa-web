@@ -30,11 +30,11 @@ export default function Index() {
             <Container className="mt-24 sm:mt-32 md:mt-56">
                 <FadeIn className="max-w-3xl">
                     <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-                        Our city is rich in culture and creativity {` `}
+                        San Antonio is rich in culture and creativity{` `}
                         <span className='text-spursTurq'>so is our tech stack</span>
                     </h1>
                     <p className="mt-6 text-xl text-neutral-600">
-                        Beyond the billion-dollar industry that powers Military City, is a community of designers, web developers, and software engineers responsible for creating online experiences on platforms that reach millions of people every day
+                        devSA is a community of designers, web developers, and software engineers responsible for creating online experiences on platforms that reach millions of people every day
                     </p>
                 </FadeIn>
             </Container>

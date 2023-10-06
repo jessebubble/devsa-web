@@ -22,15 +22,17 @@ export function Meetups({ invert = false, ...props }) {
     return (
         <ul {...props}>
             <li>
-                <Office name="devSA Discord" invert={invert}>
-                    <a href="https://discord.gg/f3gnmjScW3">discord.gg/devSA</a>
+                <Office name="devSA YouTube" invert={invert}>
+                    <a href="https://www.youtube.com/@devSATX">
+                        youtube.com/devSATX
+                    </a>
                     <br />
                 </Office>
             </li>
             <li>
-                <Office name="devSA Github" invert={invert}>
-                    <a href="https://github.com/devSanAntonio">
-                        github.com/devSA
+                <Office name="devSA Twitch" invert={invert}>
+                    <a href="https://www.twitch.tv/devsatx">
+                        twitch.tv/devSATX
                     </a>
                     <br />
                 </Office>
