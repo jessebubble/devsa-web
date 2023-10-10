@@ -11,9 +11,9 @@ export function SponsorSection() {
                 <div className="mx-auto max-w-4xl">
                     <div className="max-w-xl">
                         <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
-                            Let's show the community that{' '}
+                            Let's show the city that{' '}
                             <span className="text-centroBlue">tech in SA</span>{' '}
-                            is more than just Military City
+                            is more than just Military City, USA
                         </h2>
                         <div className="mt-6 flex">
                             <Button href="/sponsor" invert>
