@@ -73,6 +73,46 @@ const events = [
         startDatetime: '2023-10-11T17:30',
         endDatetime: '2023-10-11T19:00',
     },
+    {
+        id: 6,
+        name: 'UXSA - Intro to Object-Oriented UX',
+        location: 'ACCD Headquarters - 2222 North Alamo Street',
+        meetupUrl:
+            'https://www.meetup.com/uxsanantonio-public/events/296210582',
+        imageUrl: reactImage,
+        startDatetime: '2023-10-12T17:30',
+        endDatetime: '2023-10-12T19:00',
+    },
+    {
+        id: 7,
+        name: 'ReactSA - Intermediate Hooks',
+        location: 'Codeup Campus - 8700 Tesoro Dr',
+        meetupUrl:
+            'https://www.meetup.com/reactsa/events/296698853',
+        imageUrl: reactImage,
+        startDatetime: '2023-10-18T18:00',
+        endDatetime: '2023-10-18T19:30',
+    },
+    {
+        id: 8,
+        name: 'DevMountain - Intro to HTML',
+        location: 'Strayer University - 40 NE Loop 410 Suite 500',
+        meetupUrl:
+            'https://www.eventbrite.com/e/intro-to-html-tickets-726899926247',
+        imageUrl: reactImage,
+        startDatetime: '2023-10-18T18:00',
+        endDatetime: '2023-10-18T20:00',
+    },
+    {
+        id: 9,
+        name: 'Women in Robotics SA - Launch Party Event',
+        location: 'Capital Factory at Tech Port - 3331 General Hudnell Drive Access',
+        meetupUrl:
+            'https://www.eventbrite.com/e/women-in-robotics-san-antonio-launch-party-and-all-star-panel-discussion-tickets-734826434647',
+        imageUrl: reactImage,
+        startDatetime: '2023-10-19T17:30',
+        endDatetime: '2023-10-19T19:00',
+    },
 ];
 
 function classNames(...classes) {
