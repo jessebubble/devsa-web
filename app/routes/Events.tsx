@@ -1,4 +1,5 @@
 import RootPattern from '~/RootPattern';
+import { BuildSection } from '~/components/BuildSection';
 import { CalendarSection } from '~/components/CalendarSection';
 import { PageIntro } from '~/components/PageIntro';
 import { SponsorSection } from '~/components/SponsorSection';
@@ -16,29 +17,17 @@ export default function Events() {
             <RootPattern />
             <PageIntro
                 eyebrow="Events"
-                title="Let's build together, one event at a time"
+                title="Building a community, one event at a time"
             >
                 <p>
-                    <span className="text-spursPink">devSA</span> is
-                    a community of creatives and technologists who share a
-                    common goal, leverage the power of the web to deliver
-                    exceptional user experiences
+                    The in-person meetup space in San Antonio continues to grow and we want you to be a part of it.
+                    Let's show the city that <span className="text-spursTurq font-semibold">tech in SA</span> is more than just Military City, USA 
                 </p>
-                <div className="mt-10 max-w-2xl space-y-6 text-base">
-                    <p>
-                        As our platform expands, our goal is to grow the events space and harness the full power of the web to showcase the wide range and creativity of web design and development within our San Antonio community
-                    </p>
-                    <p>
-                        Join us in person, on Twitch, or on YouTube. We are always looking for new ways to connect and share the work and knowledge of our community in San Antonio
-                    </p>
-                </div>
             </PageIntro>
-            <div className="mt-24 sm:mt-32 lg:mt-40">
-                <div className="mt-16">
-                    <CalendarSection />
-                </div>
-            </div>
+
+            <BuildSection />
             <ToolSection />
+            <CalendarSection />
             <SponsorSection />
         </>
     );

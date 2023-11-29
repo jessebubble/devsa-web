@@ -147,25 +147,22 @@ export function CalendarSection() {
     return (
         <>
             <SectionIntro
-                title="Get inspired by the work of others in the community"
+                title="The in-person meetup space in San Antonio continues to grow" 
                 className="mt-24 sm:mt-32 lg:mt-40"
             >
                 <p>
-                    As our platform grows, our goal is to expand the events
-                    space and fully utilize the power of the web. We want to
-                    facilitate discussions on the tools, techniques, and
-                    technologies that are shaping the future of design and
-                    development for users in San Antonio and beyond
+                    These events offer a great opportunity to explore new spaces in the city and to learn about the resources available to designers and developers in the community
+             
                 </p>
             </SectionIntro>
             <Container className="mt-16">
                 <FadeIn>
-                    <div className="rounded-3xl bg-neutral-950 py-24 lg:py-32">
+                    <div className="rounded-3xl bg-neutral-50 py-24 lg:py-32">
                         <div className="mx-auto max-w-md px-4 sm:px-7 md:max-w-4xl md:px-6">
-                            <div className="md:grid md:grid-cols-2 md:divide-x md:divide-neutral-200">
+                            <div className="md:grid md:grid-cols-2 md:divide-x md:divide-neutral-300">
                                 <div className="md:pr-14">
                                     <div className="flex items-center">
-                                        <h2 className="flex-auto font-semibold text-white">
+                                        <h2 className="flex-auto font-semibold text-neutral-950">
                                             {format(
                                                 firstDayCurrentMonth,
                                                 'MMMM yyyy'
@@ -174,7 +171,7 @@ export function CalendarSection() {
                                         <button
                                             type="button"
                                             onClick={previousMonth}
-                                            className="-my-1.5 flex flex-none items-center justify-center p-1.5 text-neutral-300 hover:text-neutral-400"
+                                            className="-my-1.5 flex flex-none items-center justify-center p-1.5 text-neutral-600 hover:text-neutral-400"
                                         >
                                             <span className="sr-only">
                                                 Previous month
@@ -187,7 +184,7 @@ export function CalendarSection() {
                                         <button
                                             onClick={nextMonth}
                                             type="button"
-                                            className="-my-1.5 -mr-1.5 ml-2 flex flex-none items-center justify-center p-1.5 text-neutral-300 hover:text-neutral-400"
+                                            className="-my-1.5 -mr-1.5 ml-2 flex flex-none items-center justify-center p-1.5 text-neutral-600 hover:text-neutral-400"
                                         >
                                             <span className="sr-only">
                                                 Next month
@@ -198,7 +195,7 @@ export function CalendarSection() {
                                             />
                                         </button>
                                     </div>
-                                    <div className="mt-10 grid grid-cols-7 text-center text-xs leading-6 text-white">
+                                    <div className="mt-10 grid grid-cols-7 text-center text-xs leading-6 text-neutral-950">
                                         <div>S</div>
                                         <div>M</div>
                                         <div>T</div>
@@ -244,7 +241,7 @@ export function CalendarSection() {
                                                                 day,
                                                                 firstDayCurrentMonth
                                                             ) &&
-                                                            'text-neutral-100',
+                                                            'text-neutral-500',
                                                         !isEqual(
                                                             day,
                                                             selectedDay
@@ -254,7 +251,7 @@ export function CalendarSection() {
                                                                 day,
                                                                 firstDayCurrentMonth
                                                             ) &&
-                                                            'text-neutral-300',
+                                                            'text-neutral-white',
                                                         isEqual(
                                                             day,
                                                             selectedDay
@@ -271,7 +268,7 @@ export function CalendarSection() {
                                                             day,
                                                             selectedDay
                                                         ) &&
-                                                            'hover:bg-neutral-700',
+                                                            'hover:bg-neutral-300',
                                                         (isEqual(
                                                             day,
                                                             selectedDay
@@ -308,7 +305,7 @@ export function CalendarSection() {
                                     </div>
                                 </div>
                                 <section className="mt-12 md:mt-0 md:pl-14">
-                                    <h2 className="font-semibold text-white">
+                                    <h2 className="font-semibold text-neutral-950">
                                         Schedule for{' '}
                                         <time
                                             dateTime={format(
@@ -319,7 +316,7 @@ export function CalendarSection() {
                                             {format(selectedDay, 'MMM dd, yyy')}
                                         </time>
                                     </h2>
-                                    <ol className="mt-4 space-y-1 text-sm leading-6 text-neutral-500">
+                                    <ol className="mt-4 space-y-1 text-sm leading-6 text-neutral-600">
                                         {selectedEventDays.length > 0 ? (
                                             selectedEventDays.map((event) => (
                                                 <Event
@@ -349,7 +346,7 @@ function Event({ event }) {
     let endDateTime = parseISO(event.endDatetime);
 
     return (
-        <li className="group flex items-center space-x-4 rounded-xl px-4 py-2 text-white focus-within:bg-neutral-200 hover:bg-neutral-200 hover:text-neutral-950">
+        <li className="group flex items-center space-x-4 rounded-xl px-4 py-2 text-neutral-950 focus-within:bg-neutral-200 hover:bg-neutral-200 hover:text-neutral-950">
             <img
                 src={event.imageUrl}
                 alt=""

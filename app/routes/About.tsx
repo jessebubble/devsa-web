@@ -5,6 +5,7 @@ import { StatList, StatListItem } from '~/components/StatList';
 import RootPattern from '~/RootPattern';
 import { DiscordSection } from '~/components/DiscordSection';
 import { ToolSection } from '~/components/ToolSection';
+import { BuildSection } from '~/components/BuildSection';
 
 export const meta: V2_MetaFunction = () => {
     return [
@@ -23,26 +24,14 @@ export default function About() {
             <RootPattern />
             <PageIntro
                 eyebrow="About us"
-                title="We are a community of creatives and technologists"
+                title="Where the tech community goes to share their work, ask for help and get inspired"
             >
                 <p>
-                    Leverage the power of the web to solve problems and deliver exceptional user experiences, it's what we do
-                    
+                    The goal of devSA is to initiate conversations and foster collaboration within the design, web development, and engineering community in San Antonio, Texas                    
                 </p>
-                <div className="mt-10 max-w-2xl space-y-6 text-base">
-                    <p>
-                        We aim to connect designers, marketing agencies, web developers, mobile, data and cloud
-                        engineers in San Antonio through the various tools, resources and events we host and sponsor throughout the year 
-
-                    </p>
-                    <p>
-                        Once connected, our platform creates an opportunity to leverage the power of our community to ask for help, share your work, and get inspired by the work of others in the community
-                    </p>
-                </div>
             </PageIntro>
-
-            <DiscordSection />
             <ToolSection />
+            <BuildSection />
         </>
     );
 }

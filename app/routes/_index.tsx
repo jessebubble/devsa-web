@@ -6,7 +6,7 @@ import { DiscordSection } from '~/components/DiscordSection';
 import { ToolSection } from '~/components/ToolSection';
 import { CalendarSection } from '~/components/CalendarSection';
 import { SponsorSection } from '~/components/SponsorSection';
-//import { BuildSection } from '~/components/BuildSection';
+import { BuildSection } from '~/components/BuildSection';
 
 export const meta: V2_MetaFunction = () => {
     return [
@@ -30,8 +30,7 @@ export default function Index() {
             <Container className="mt-24 sm:mt-32 md:mt-40">
                 <FadeIn className="max-w-3xl">
                     <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-                        San Antonio is rich in culture and creativity{' '}
-                        <span className='text-spursTurq block'>so is our tech stack</span>
+                        The city of SA is rich in culture and creativity <strong className="text-spursTurq">so is our tech stack</strong>
                     </h1>
                     <p className="mt-6 text-xl text-neutral-600">
                         The goal of devSA is to initiate conversations and foster collaboration within the design, web development, and engineering community in San Antonio, Texas
@@ -41,8 +40,8 @@ export default function Index() {
             </Container>
 
             <DiscordSection />
-{/*             <BuildSection />
- */}            <ToolSection />
+            <ToolSection />
+            <BuildSection />
             <CalendarSection />
             <SponsorSection />
         </>
