@@ -34,9 +34,9 @@ export function ToolSection() {
         <Container className="mt-24 sm:mt-32 lg:mt-40">
             <FadeIn>
                 <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                    Leveraging the power of our{' '}
+                    Leveraging the power of our tech community in{' '}
                     <span className="text-spursPink">
-                        tech community
+                        San Antonio
                     </span>
                 </h2>
             </FadeIn>

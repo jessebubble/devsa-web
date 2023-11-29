@@ -4,9 +4,9 @@ import { FadeIn } from '~/components/FadeIn';
 import { GridPattern } from '~/components/GridPattern';
 import { DiscordSection } from '~/components/DiscordSection';
 import { ToolSection } from '~/components/ToolSection';
-import { StoreSection } from '~/components/StoreSection';
 import { CalendarSection } from '~/components/CalendarSection';
 import { SponsorSection } from '~/components/SponsorSection';
+//import { BuildSection } from '~/components/BuildSection';
 
 export const meta: V2_MetaFunction = () => {
     return [
@@ -27,22 +27,23 @@ export default function Index() {
                 yOffset={-96}
                 interactive
             />
-            <Container className="mt-24 sm:mt-32 md:mt-56">
+            <Container className="mt-24 sm:mt-32 md:mt-40">
                 <FadeIn className="max-w-3xl">
                     <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
                         San Antonio is rich in culture and creativity{' '}
                         <span className='text-spursTurq block'>so is our tech stack</span>
                     </h1>
                     <p className="mt-6 text-xl text-neutral-600">
-                        devSA is a community of designers, web developers, and software engineers responsible for creating online experiences on platforms that reach millions of people every day
+                        The goal of devSA is to initiate conversations and foster collaboration within the design, web development, and engineering community in San Antonio, Texas
+
                     </p>
                 </FadeIn>
             </Container>
 
             <DiscordSection />
-            <ToolSection />
+{/*             <BuildSection />
+ */}            <ToolSection />
             <CalendarSection />
-            <StoreSection />
             <SponsorSection />
         </>
     );

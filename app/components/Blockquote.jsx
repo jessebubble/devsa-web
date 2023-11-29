@@ -49,7 +49,7 @@ function BlockquoteWithoutImage({ author, children, className }) {
     );
 }
 
-export function Blockquote(props) {
+export function BlockQuote(props) {
     if (props.image) {
         return <BlockquoteWithImage {...props} />;
     }

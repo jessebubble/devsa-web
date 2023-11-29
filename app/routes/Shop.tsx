@@ -1,10 +1,9 @@
 import { PageIntro } from "~/components/PageIntro";
 import { ToolSection } from "~/components/ToolSection";
-import { SponsorSection } from "~/components/SponsorSection";
 import { GridPattern } from "~/components/GridPattern";
 import { DiscordSection } from "~/components/DiscordSection";
 import { Button } from "~/components/Button";
-import { ShopCollection } from "~/components/ShopCollection";
+import {CollectionSection} from "~/components/CollectionSection";
 
 
 export const metadata = {
@@ -21,11 +20,12 @@ export default function Sponsor() {
                 interactive
             />
             <PageIntro
-                eyebrow="The devSA SHOP"
-                title="Where tradition meets innovation"
+                eyebrow="Shop devSA"
+                title="Wear the web and embrace the spirit of San Antonio"
             >
                 <p>
-                    <span className="text-centroPink">The devSA shop</span> celebrates the rich, Mexican-inspired culture and storied history of San Antonio by incorporating vibrant colors, captivating motifs, and authentic elements into every theme and design
+                    Every purchase you make goes right back into our growing community! 
+                    Your support helps cover our monthly costs and fuels the tools and services used to build for the tech community in SA
                 </p>
                 <Button
                     className="mt-8"
@@ -34,14 +34,12 @@ export default function Sponsor() {
                     rel="noopener noreferrer"
                     invert={false}
                 >
-                    Shop our latest collections &rarr;
+                    Visit the official shop &rarr;
                 </Button>
             </PageIntro>
-            
-            <ShopCollection />
-            <DiscordSection />
             <ToolSection />
-            <SponsorSection />
+            <CollectionSection />
+            <DiscordSection />
         </>
     );
 }
