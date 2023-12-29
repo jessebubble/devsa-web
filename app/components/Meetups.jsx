@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { Link } from "@remix-run/react"
+import { Link } from '@remix-run/react';
 
 function Office({ name, children, invert = false }) {
     return (
@@ -51,9 +51,7 @@ export function Support({ invert = false, ...props }) {
             </li>
             <li>
                 <Office name="devSA Events" invert={invert}>
-                    <Link to="/events">
-                        devsanantonio.com/events
-                    </Link>
+                    <Link to="/events">devsanantonio.com/events</Link>
                     <br />
                 </Office>
             </li>

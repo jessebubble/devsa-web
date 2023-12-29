@@ -23,7 +23,9 @@ export default function About() {
                 title="Where the tech community goes to share their work, ask for help and get inspired"
             >
                 <p>
-                    The goal of devSA is to initiate conversations and foster collaboration within the design, web development, and engineering community in San Antonio, Texas                    
+                    The goal of devSA is to initiate conversations and foster
+                    collaboration within the design, web development, and
+                    engineering community in San Antonio, Texas
                 </p>
             </PageIntro>
 

@@ -1,9 +1,9 @@
-import { PageIntro } from "~/components/PageIntro";
-import { ToolSection } from "~/components/ToolSection";
-import { GridPattern } from "~/components/GridPattern";
-import { DiscordSection } from "~/components/DiscordSection";
-import { Button } from "~/components/Button";
-import {CollectionSection} from "~/components/CollectionSection";
+import { PageIntro } from '~/components/PageIntro';
+import { ToolSection } from '~/components/ToolSection';
+import { GridPattern } from '~/components/GridPattern';
+import { DiscordSection } from '~/components/DiscordSection';
+import { Button } from '~/components/Button';
+import { CollectionSection } from '~/components/CollectionSection';
 
 export default function Sponsor() {
     return (
@@ -18,8 +18,10 @@ export default function Sponsor() {
                 title="Wear the web and embrace the spirit of San Antonio"
             >
                 <p>
-                    Every purchase you make goes right back into our growing community! 
-                    Your support helps cover our monthly costs and fuels the tools and services used to build for the tech community in SA
+                    Every purchase you make goes right back into our growing
+                    community! Your support helps cover our monthly costs and
+                    fuels the tools and services used to build for the tech
+                    community in SA
                 </p>
                 <Button
                     className="mt-8"

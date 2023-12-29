@@ -55,9 +55,7 @@ function NavBar({
                     onMouseEnter={() => setLogoHovered(true)}
                     onMouseLeave={() => setLogoHovered(false)}
                 >
-                    <DevSaLogo
-                        className="-ml-5 md:-ml-6 w-28 md:w-32 lg:w-36"
-                    />
+                    <DevSaLogo className="-ml-5 w-28 md:-ml-6 md:w-32 lg:w-36" />
                 </Link>
                 <div className="flex items-center gap-x-8">
                     <Button href="/shop" invert={invert} className="">
@@ -67,7 +65,7 @@ function NavBar({
                                 invert
                                     ? 'fill-neutral-950 group-hover:fill-neutral-700'
                                     : 'group-hover:fll-neutral-200 fill-white'
-                            )}  
+                            )}
                         />
                     </Button>
                     <button
@@ -132,7 +130,9 @@ function Navigation() {
             </NavigationRow>
             <NavigationRow>
                 <NavigationItem href="/about">About us</NavigationItem>
-                <NavigationItem href="/shop">Shop our collection</NavigationItem>
+                <NavigationItem href="/shop">
+                    Shop our collection
+                </NavigationItem>
             </NavigationRow>
         </nav>
     );

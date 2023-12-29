@@ -9,8 +9,8 @@ authorImage: /about.png
 authorRole: Rocketman
 ---
 
-import { Container } from "../components/Container";
-import { FadeIn } from "../components/FadeIn";
+import { Container } from '../components/Container';
+import { FadeIn } from '../components/FadeIn';
 
 <Container className="mt-24 sm:mt-32 lg:mt-40 mx-auto max-w-7xl px-6 lg:px-8">
     <FadeIn>
@@ -38,11 +38,11 @@ import { FadeIn } from "../components/FadeIn";
             <div className="mx-auto max-w-5xl">
                 <figure className=''>
                     <div className="overflow-hidden rounded-xl bg-neutral-50 sm:rounded-3xl">
-                        <img 
+                        <img
                             className="aspect-[16/10] object-cover grayscale w-full" sizes="(min-width: 768px) 42rem, 100vw"
                             src={frontmatter.heroImage}
-                            alt="black and white house" 
-                        />        
+                            alt="black and white house"
+                        />
                     </div>
                     <blockquote className="text-xl/7 text-neutral-600 mt-8 mx-auto">
 
@@ -52,117 +52,134 @@ import { FadeIn } from "../components/FadeIn";
 
 **HTML Drag and Drop** interfaces allow applications to implement drag-and-drop features in web browsers.
 
-A user can select *draggable* elements with a mouse, then drag those elements to a *droppable* element, and release the mouse button to drop them. During the drag operation, a translucent representation of the *draggable* elements follows the pointer.
+A user can select _draggable_ elements with a mouse, then drag those elements to a _droppable_ element, and release the mouse button to drop them. During the drag operation, a translucent representation of the _draggable_ elements follows the pointer.
+
 <br />
 <br />
 
+HTML drag-and-drop uses the [DOM event model](https://developer.mozilla.org/en-US/docs/Web/API/Event) and [drag events](https://developer.mozilla.org/en-US/docs/Web/API/DragEvent) inherited from [mouse events](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent). A typical drag operation begins when a user selects a _draggable_ element, continues as the user drags the element to a _droppable_ element, and ends when the user releases the dragged element.
 
-HTML drag-and-drop uses the [DOM event model](https://developer.mozilla.org/en-US/docs/Web/API/Event) and [drag events](<https://developer.mozilla.org/en-US/docs/Web/API/DragEvent>) inherited from [mouse events](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent). A typical drag operation begins when a user selects a *draggable* element, continues as the user drags the element to a *droppable* element, and ends when the user releases the dragged element.
 <br />
 <br />
 
-<strong className="text-spursTurq">How to make elements draggable using the HTML Drag and Drop API:</strong>
+<strong className="text-spursTurq">
+    How to make elements draggable using the HTML Drag and Drop API:
+</strong>
 
 1. **Making Elements Draggable:**
    To make an element draggable, you need to set the `draggable` attribute to `true` on the element you want to drag. For example:
-  <br />
-  <br />
 
-   ```html
-   <div draggable="true">Drag me!</div>
-   ```
+    <br />
+    <br />
+
+    ```html
+    <div draggable="true">Drag me!</div>
+    ```
 
 <br />
 
 2. **Implementing Event Handlers:**
    You'll need to implement event handlers to control the drag-and-drop behavior. The main event handlers used in the drag-and-drop process are:
-<br />
-<br />
 
-   - <span className="text-spursOrange">dragstart</span>: Fired when the drag operation starts on the draggable element.
-   - <span className="text-spursOrange">dragover</span>: Fired when a draggable element is being dragged over a drop target.
-   - <span className="text-spursOrange">dragenter</span>: Fired when a draggable element enters a drop target.
-   - <span className="text-spursOrange">dragleave</span>: Fired when a draggable element leaves a drop target.
-   - <span className="text-spursOrange">drop</span>: Fired when a draggable element is dropped on a drop target.
-   - <span className="text-spursOrange">dragend</span>: Fired when the drag operation ends.
+    <br />
+    <br />
 
-<br />
+    - <span className="text-spursOrange">dragstart</span>: Fired when the drag
+      operation starts on the draggable element.
+    - <span className="text-spursOrange">dragover</span>: Fired when a draggable
+      element is being dragged over a drop target.
+    - <span className="text-spursOrange">dragenter</span>: Fired when a
+      draggable element enters a drop target.
+    - <span className="text-spursOrange">dragleave</span>: Fired when a
+      draggable element leaves a drop target.
+    - <span className="text-spursOrange">drop</span>: Fired when a draggable
+      element is dropped on a drop target.
+    - <span className="text-spursOrange">dragend</span>: Fired when the drag
+      operation ends.
 
-3. **Event Handling Steps:**
-
-   - <span className="text-spursOrange">dragstart</span>: This event is used to specify the data that will be dragged and provide feedback during the drag operation. You can set data using the `dataTransfer.setData()` method:
-<br />
-
-
-     ```html
-     <div draggable="true" dragstart="event.dataTransfer.setData('text/plain', 'Hello')">Drag me!</div>
-     ```
 <br />
 
-   - <span className="text-spursOrange">dragover</span>: This event is required to allow dropping on the element. You need to prevent the default behavior to enable dropping: 
+3.  **Event Handling Steps:**
 
+    -   <span className="text-spursOrange">dragstart</span>: This event is used
+        to specify the data that will be dragged and provide feedback during the
+        drag operation. You can set data using the `dataTransfer.setData()`
+        method:
+        <br />
 
-     ```html
-     <div
-       draggable="true"
-       dragstart="event.dataTransfer.setData('text/plain', 'Hello')"
-       dragover="event.preventDefault()"
-     >
-       Drag me!
-     </div>
-     ```
+             ```html
+             <div draggable="true" dragstart="event.dataTransfer.setData('text/plain', 'Hello')">Drag me!</div>
+             ```
 
-  <br />
+        <br />
 
-   - <span className="text-spursOrange">drop</span>: This event is used to handle the drop operation. You can retrieve the dragged data using `event.dataTransfer.getData()`:
+    -   <span className="text-spursOrange">dragover</span>: This event is
+        required to allow dropping on the element. You need to prevent the
+        default behavior to enable dropping:{' '}
 
+        ```html
+        <div
+            draggable="true"
+            dragstart="event.dataTransfer.setData('text/plain', 'Hello')"
+            dragover="event.preventDefault()"
+        >
+            Drag me!
+        </div>
+        ```
 
+{' '}
+<br />
 
-     ```html
-     <div
+-   <span className="text-spursOrange">drop</span>: This event is used to handle
+    the drop operation. You can retrieve the dragged data using
+    `event.dataTransfer.getData()`:
+
+    ```html
+    <div
         draggable="true"
         dragstart="event.dataTransfer.setData('text/plain', 'Hello')"
         dragover="event.preventDefault()"
         drop="console.log(event.dataTransfer.getData('text/plain'))"
-     >
-       Drop here!
-     </div>
-     ```
+    >
+        Drop here!
+    </div>
+    ```
 
 <br />
 
 4. **Customizing Drag Image:**
    You can also customize the appearance of the drag image using the `event.dataTransfer.setDragImage()` method within the `dragstart` event handler.
-<br />
-<br />
 
-   ```html
-   <div
-     draggable="true"
-     dragstart="event.dataTransfer.setDragImage(document.getElementById('drag-image'), 0, 0)"
-     dragover="event.preventDefault()"
-     drop="console.log(event.dataTransfer.getData('text/plain'))"
-   >
-     Drag me!
-   </div>
-   <img id="drag-image" src="https://picsum.photos/200" />
-   ```
-<br />
+    <br />
+    <br />
+
+    ```html
+    <div
+        draggable="true"
+        dragstart="event.dataTransfer.setDragImage(document.getElementById('drag-image'), 0, 0)"
+        dragover="event.preventDefault()"
+        drop="console.log(event.dataTransfer.getData('text/plain'))"
+    >
+        Drag me!
+    </div>
+    <img id="drag-image" src="https://picsum.photos/200" />
+    ```
+
+    <br />
 
 <div className="overflow-hidden rounded-xl bg-neutral-50 sm:rounded-3xl">
-    <img 
-        className="aspect-[16/10] object-cover grayscale w-full" sizes="(min-width: 768px) 42rem, 100vw"
+    <img
+        className="aspect-[16/10] w-full object-cover grayscale"
+        sizes="(min-width: 768px) 42rem, 100vw"
         src="/about.png"
         alt="black and white house"
     />
 </div>
-
 
                 </blockquote>
             </figure>
             </div>
         </article>
     </FadeIn>
+
 </Container>
-
-

@@ -32,8 +32,12 @@ function NewsletterForm() {
                         aria-label="Submit"
                         className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
                     >
-                        {isSubmitting ? <CheckIcon className="w-4 text-centroGreen font-bold" /> : <ArrowIcon className="w-4" />}
-                    </button>          
+                        {isSubmitting ? (
+                            <CheckIcon className="w-4 font-bold text-centroGreen" />
+                        ) : (
+                            <ArrowIcon className="w-4" />
+                        )}
+                    </button>
                 </div>
             </div>
         </fetcher.Form>

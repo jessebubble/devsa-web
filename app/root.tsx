@@ -9,17 +9,18 @@ import {
     Scripts,
     ScrollRestoration,
 } from '@remix-run/react';
-import "~/tailwind.css";
+import '~/tailwind.css';
 
 export const links: LinksFunction = () => [
     { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
 ];
 
 export const meta: MetaFunction = () => [
-    { title: "San Antonio Designers, Developers and Engineers" },
+    { title: 'San Antonio Designers, Developers and Engineers' },
     {
-      name: "description",
-      content: "San Antonio is rich in culture and creativity so is our tech stack. We are a group of designers, developers and engineers that are passionate about our craft and our city. We are here to share our knowledge and experiences with each other and the community.",
+        name: 'description',
+        content:
+            'San Antonio is rich in culture and creativity so is our tech stack. We are a group of designers, developers and engineers that are passionate about our craft and our city. We are here to share our knowledge and experiences with each other and the community.',
     },
 ];
 

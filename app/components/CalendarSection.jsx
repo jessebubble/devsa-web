@@ -87,8 +87,7 @@ const events = [
         id: 7,
         name: 'ReactSA - Intermediate Hooks',
         location: 'Codeup Campus - 8700 Tesoro Dr',
-        meetupUrl:
-            'https://www.meetup.com/reactsa/events/296698853',
+        meetupUrl: 'https://www.meetup.com/reactsa/events/296698853',
         imageUrl: reactImage,
         startDatetime: '2023-10-18T18:00',
         endDatetime: '2023-10-18T19:30',
@@ -106,7 +105,8 @@ const events = [
     {
         id: 9,
         name: 'Women in Robotics SA - Launch Party Event',
-        location: 'Capital Factory at Tech Port - 3331 General Hudnell Drive Access',
+        location:
+            'Capital Factory at Tech Port - 3331 General Hudnell Drive Access',
         meetupUrl:
             'https://www.eventbrite.com/e/women-in-robotics-san-antonio-launch-party-and-all-star-panel-discussion-tickets-734826434647',
         imageUrl: reactImage,
@@ -146,14 +146,16 @@ export function CalendarSection() {
 
     return (
         <>
-        <SectionIntro
-            eyebrow="More than just a discord server"
-            title="The in-person meetup space in San Antonio continues to grow"
-            className="mt-24 sm:mt-32 lg:mt-40"
+            <SectionIntro
+                eyebrow="More than just a discord server"
+                title="The in-person meetup space in San Antonio continues to grow"
+                className="mt-24 sm:mt-32 lg:mt-40"
             >
-            <p>
-                These events offer a great opportunity to explore new spaces in the city and to learn about the resources available to designers and developers in the community
-            </p>
+                <p>
+                    These events offer a great opportunity to explore new spaces
+                    in the city and to learn about the resources available to
+                    designers and developers in the community
+                </p>
             </SectionIntro>
             <Container className="mt-16">
                 <FadeIn>

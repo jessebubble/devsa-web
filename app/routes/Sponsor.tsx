@@ -46,14 +46,11 @@ function RadioInput({ label, ...props }) {
 
 function SponsorForm() {
     const fetcher = useFetcher();
-    const isSubmitting = fetcher.state === 'submitting';    
+    const isSubmitting = fetcher.state === 'submitting';
 
     return (
         <FadeIn className="lg:order-last">
-            <fetcher.Form 
-                method="post"
-                action="/send"
-            >
+            <fetcher.Form method="post" action="/send">
                 <h2 className="font-display text-base font-semibold text-neutral-950">
                     Sponsor inquiries
                 </h2>
@@ -78,9 +75,9 @@ function SponsorForm() {
                     />
                     <TextInput label="Message" name="message" />
                 </div>
-                <Button type="submit" className="mt-10" invert={false} >
+                <Button type="submit" className="mt-10" invert={false}>
                     {isSubmitting ? 'Sending...' : "Let's build together"}
-                </Button>          
+                </Button>
             </fetcher.Form>
         </FadeIn>
     );
@@ -93,7 +90,9 @@ function SponsorDetails() {
                 Sponsor an event
             </h2>
             <p className="mt-6 text-base text-neutral-600">
-                If you are interested in sponsoring an event, please reach out to us and we will get back to you as soon as possible with more information about our sponsorship packages and opportunities
+                If you are interested in sponsoring an event, please reach out
+                to us and we will get back to you as soon as possible with more
+                information about our sponsorship packages and opportunities
             </p>
 
             <Support className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
@@ -143,8 +142,10 @@ export default function Sponsor() {
                 title="We appreciate your support and generosity"
             >
                 <p>
-                    Thank you for your interest in sponsoring an event. 
-                    We are constantly seeking sponsors to assist us in creating an inclusive, accessible, and welcoming in-person experience for everyone
+                    Thank you for your interest in sponsoring an event. We are
+                    constantly seeking sponsors to assist us in creating an
+                    inclusive, accessible, and welcoming in-person experience
+                    for everyone
                 </p>
             </PageIntro>
 

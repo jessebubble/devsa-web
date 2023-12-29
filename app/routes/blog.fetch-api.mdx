@@ -9,8 +9,8 @@ authorImage: /hero.png
 heroImage: /about.png
 ---
 
-import { Container } from '../components/Container'
-import { FadeIn } from '../components/FadeIn'
+import { Container } from '../components/Container';
+import { FadeIn } from '../components/FadeIn';
 
 export const meta = () => {
     return [
@@ -18,9 +18,9 @@ export const meta = () => {
         {
             name: 'description',
             content: frontmatter.description,
-        }
-    ]
-}
+        },
+    ];
+};
 
 <Container className="mt-24 sm:mt-32 lg:mt-40 mx-auto max-w-7xl px-6 lg:px-8">
     <FadeIn>
@@ -48,25 +48,30 @@ export const meta = () => {
         <div className="mx-auto max-w-5xl">
         <figure className=''>
             <div className="overflow-hidden rounded-xl bg-neutral-50 sm:rounded-3xl">
-                <img 
+                <img
                     className="aspect-[16/10] object-cover grayscale w-full" sizes="(min-width: 768px) 42rem, 100vw"
                     src={frontmatter.heroImage}
-                    alt="black and white house" 
-                />        
+                    alt="black and white house"
+                />
             </div>
             <blockquote className="text-xl/7 text-neutral-600 mt-8 mx-auto">
-{/* // mdx start content */}    
+
+{/* // mdx start content */}
 
 <strong>Fetch API</strong>
 <br />
 <br />
-The Fetch API is widely used in modern web development because of its simplicity and native support in most browsers.
-The Fetch API offers a set of objects and interfaces that enable flexible and standardized interaction with network requests and responses. These objects facilitate creating, sending, and processing HTTP requests, as well as handling corresponding responses. Key objects provided by the Fetch API include:
+The Fetch API is widely used in modern web development because of its simplicity
+and native support in most browsers. The Fetch API offers a set of objects and interfaces
+that enable flexible and standardized interaction with network requests and responses.
+These objects facilitate creating, sending, and processing HTTP requests, as well
+as handling corresponding responses. Key objects provided by the Fetch API include:
 <br />
 <br />
 
 1. **Request:** The `Request` object represents an HTTP request that you can customize before sending. It enables you to specify details such as the URL, HTTP method, headers, and body content.
-<br />
+
+    <br />
 
 2. **Response:** The `Response` object represents an HTTP response from a server. It contains information about the response status, headers, and body content. You can use methods on the `Response` object to process the data, such as reading the response body as text or JSON.
 
@@ -86,62 +91,73 @@ These objects provide a standardized method of working with HTTP requests and re
 
 <br />
 
-
 <strong> Fetch API Example </strong>
 <br />
 <br />
 
-<strong class="text-spursTurq">Here's an example that fetches weather data from the OpenWeather API:</strong>
+<strong class="text-spursTurq">
+    Here's an example that fetches weather data from the OpenWeather API:
+</strong>
 
 ```jsx
 import { useState } from 'react';
 
 export const WeatherApp = () => {
-  const [cityName, setCityName] = useState('');
-  const [weatherData, setWeatherData] = useState(null);
-  
-  const apiKey = 'YOUR_OPENWEATHER_API_KEY';
+    const [cityName, setCityName] = useState('');
+    const [weatherData, setWeatherData] = useState(null);
 
-  const fetchWeatherData = async () => {
-    try {
-      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`);
-      const data = await response.json();
-      setWeatherData(data);
-    } catch (error) {
-      console.error('Error fetching weather data:', error);
-    }
-  };
+    const apiKey = 'YOUR_OPENWEATHER_API_KEY';
 
-  return (
-    <div>
-      <h1>Weather App</h1>
-      <input
-        type="text"
-        value={cityName}
-        onChange={(e) => setCityName(e.target.value)}
-        placeholder="Enter city name"
-      />
-      <button onClick={fetchWeatherData}>Get Weather</button>
-      
-      {weatherData && (
+    const fetchWeatherData = async () => {
+        try {
+            const response = await fetch(
+                `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`
+            );
+            const data = await response.json();
+            setWeatherData(data);
+        } catch (error) {
+            console.error('Error fetching weather data:', error);
+        }
+    };
+
+    return (
         <div>
-          <h2>Weather Information for {weatherData.name}, {weatherData.sys.country}</h2>
-          <p>Temperature: {weatherData.main.temp} K</p>
-          <p>Weather: {weatherData.weather[0].description}</p>
+            <h1>Weather App</h1>
+            <input
+                type="text"
+                value={cityName}
+                onChange={(e) => setCityName(e.target.value)}
+                placeholder="Enter city name"
+            />
+            <button onClick={fetchWeatherData}>Get Weather</button>
+
+            {weatherData && (
+                <div>
+                    <h2>
+                        Weather Information for {weatherData.name},{' '}
+                        {weatherData.sys.country}
+                    </h2>
+                    <p>Temperature: {weatherData.main.temp} K</p>
+                    <p>Weather: {weatherData.weather[0].description}</p>
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 };
 ```
 
 <br />
-In this example, replace 'YOUR_OPENWEATHER_API_KEY' with your actual OpenWeather API key. The component keeps track of the state for the city name input and the fetched weather data. When the "Get Weather" button is clicked, the fetchWeatherData function sends a request to the OpenWeather API and updates the weatherData state with the response.
+In this example, replace 'YOUR_OPENWEATHER_API_KEY' with your actual OpenWeather
+API key. The component keeps track of the state for the city name input and the fetched
+weather data. When the "Get Weather" button is clicked, the fetchWeatherData function
+sends a request to the OpenWeather API and updates the weatherData state with the
+response.
 
 {/* // mdx end content */}
-            </blockquote>
-        </figure>
-        </div>
-    </article>
-    </FadeIn>
+</blockquote>
+</figure>
+</div>
+</article>
+</FadeIn>
+
 </Container>
