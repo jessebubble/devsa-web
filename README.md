@@ -1,7 +1,5 @@
 # devSA
 
-Beyond the billion-dollar industry that powers Military City, USA is a community of designers, marketing agencies and web developers in San Antonio creating online experiences on platforms that reach millions of people every day
-
 Our goal is simple, `connect the worlds of design, marketing, web, mobile and cloud development` by providing a platform for creatives and technologists to share their work, ask for help, find inspiration, and contribute to the growth of this community
 
 <img src="./app/components/images/events/devsa.png" style="width: 50%;">
