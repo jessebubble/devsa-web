@@ -14,7 +14,6 @@ module.exports = {
                 centroYellow: '#FACB11',
                 centroBlue: '#1DB7BA',
                 centroPink: '#F13F6D',
-                centroOrange: '#F89225',
                 cosaRed: '#8B0E04',
                 cosaRose: '#CF4240',
                 cosaBrown: '#551900',
@@ -23,7 +22,6 @@ module.exports = {
                 cosaWhite: '#EEEEEE',
                 cosaGrey: '#333333',
                 cosaPink: '#E00490',
-                cosaGreen: '#09B081',
                 cosaGold: '#F7D002',
             },
             fontFamily: {
@@ -31,5 +29,8 @@ module.exports = {
             },
         },
     },
-    plugins: [require('@headlessui/tailwindcss')],
+    plugins: [
+        require('@headlessui/tailwindcss'),
+        require('@tailwindcss/typography'),
+    ],
 } satisfies Config;

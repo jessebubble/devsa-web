@@ -1,14 +1,15 @@
+import type { MetaFunction } from '@remix-run/node';
 import RootPattern from '~/RootPattern';
-import { BuildSection } from '~/components/BuildSection';
 import { CalendarSection } from '~/components/CalendarSection';
 import { PageIntro } from '~/components/PageIntro';
 import { SponsorSection } from '~/components/SponsorSection';
 import { ToolSection } from '~/components/ToolSection';
 
-export const metadata = {
-    title: 'Design and Web Developer Events in San Antonio',
-    description:
-        'Stay up-to-date with the latest design and web development events in San Antonio, Texas. Join our community of creatives and technologists who share a common goal: leverage the power of the web to deliver exceptional user experiences',
+export const meta: MetaFunction = () => {
+    return [
+        { title: 'Design and Web Developer Events in San Antonio' },
+        { description: 'Stay up-to-date with the latest design and web development events in San Antonio, Texas. Join our community of creatives and technologists who share a common goal: leverage the power of the web to deliver exceptional user experiences' },
+    ];
 };
 
 export default function Events() {
@@ -25,10 +26,9 @@ export default function Events() {
                 </p>
             </PageIntro>
 
-            <BuildSection />
-            <ToolSection />
-            <CalendarSection />
             <SponsorSection />
+            <CalendarSection />
+            <ToolSection />
         </>
     );
 }

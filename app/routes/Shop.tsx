@@ -5,12 +5,6 @@ import { DiscordSection } from "~/components/DiscordSection";
 import { Button } from "~/components/Button";
 import {CollectionSection} from "~/components/CollectionSection";
 
-
-export const metadata = {
-    title: 'devSA Store',
-    description: "web design and web development store in San Antonio, Texas. Join our community of creatives and technologists who share a common goal: leverage the power of the web to deliver exceptional user experiences"
-};
-
 export default function Sponsor() {
     return (
         <>

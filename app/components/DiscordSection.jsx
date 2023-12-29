@@ -11,7 +11,7 @@ export function DiscordSection() {
                 title="Where designers and developers connect in San Antonio"
                 invert
             >
-                <p>
+                <p className='text-balance'>
                     We are a group of creatives and technologists who share a
                     common goal,
                     <span className="text-centroBlue">
@@ -30,17 +30,17 @@ export function DiscordSection() {
             </SectionIntro>
             <Container className="mt-16">
                 <GridList className="">
-                    <GridListItem title="Share your work" invert className="">
+                    <GridListItem title="Share your work" invert className="text-balance">
                         The user doesn't care what tools you use, and neither do
                         we. We want to celebrate your work, learn from it and
                         grow as designers or developers
                     </GridListItem>
-                    <GridListItem title="Ask for help" invert className="">
+                    <GridListItem title="Ask for help" invert className="text-balance">
                         Our help forum aims to provide support by connecting the
                         worlds of design, marketing, web development, and
                         backend infrastructure
                     </GridListItem>
-                    <GridListItem title="Get inspired" invert className="">
+                    <GridListItem title="Get inspired" invert className="text-balance">
                         We are a city rich in culture and creativity, and our
                         goal is to create a space that fosters unprecedented
                         connections among members of the tech community

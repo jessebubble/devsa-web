@@ -1,0 +1,94 @@
+---
+title: Introducing MDX
+description: Demo of Markdown syntax and React components in MDX format Remix and Vite
+published: 2023-09-08
+featured: false
+heroImage: /hero.png
+author: Elton John
+authorImage: /about.png
+authorRole: Rocketman
+---
+
+import { Container } from "../components/Container";
+import { FadeIn } from "../components/FadeIn";
+
+<Container className="mt-24 sm:mt-32 lg:mt-40 mx-auto max-w-7xl px-6 lg:px-8">
+  <FadeIn>
+    <header className="mx-auto flex max-w-5xl flex-col text-center">
+        <h1 className="mt-6 font-display text-5xl font-medium tracking-tight text-neutral-950 text-balance sm:text-6xl">
+            {frontmatter.title}
+        </h1>
+        <time className="order-first text-sm text-neutral-950">
+            {new Date(frontmatter.published).toLocaleDateString(
+            "en-US",
+                {
+                    month: "short",
+                    year: "numeric",
+                }
+            )}
+        </time>
+        <p className="mt-6 text-sm font-semibold text-neutral-950">
+            by {frontmatter.author}, {frontmatter.authorRole}
+        </p>
+    </header>
+  </FadeIn>
+
+  <FadeIn>
+    <article className="mt-24 sm:mt-32 lg:mt-40">
+        <div className="mx-auto max-w-5xl">
+        <figure className=''>
+            <div className="overflow-hidden rounded-xl bg-neutral-50 sm:rounded-3xl">
+                <img 
+                    className="aspect-[16/10] object-cover grayscale w-full" sizes="(min-width: 768px) 42rem, 100vw"
+                    src={frontmatter.heroImage}
+                    alt="black and white house" 
+                />        
+            </div>
+            <blockquote className="text-xl/7 text-neutral-600 mt-8 mx-auto">
+{/* // mdx start content */}
+
+
+<strong> Markdown for the component era </strong>
+<br />
+<br />
+
+**1. Use Cases:** MDX is commonly used for a variety of purposes, including:
+
+- <span className="text-spursOrange">Documentation:</span> You can create interactive documentation with explanations and code examples that can be executed.
+- <span className="text-spursOrange">Blogging:</span> MDX allows you to write blog posts with rich formatting and interactive elements.
+- <span className="text-spursOrange">Presentations:</span> It can be used to create slide decks or presentations by combining Markdown content with React components for slide transitions and animations.
+- <span className="text-spursOrange">Component Documentation:</span> It's helpful for documenting and showcasing React components with live examples.
+
+<br />
+
+**2. Front Matter:** MDX supports front matter, which is metadata included at the beginning of a file. It's often written in YAML or JSON format and can include information like the title, author, or any custom data.
+
+```mdx
+---
+title: Rocketman loves MDX 
+author: Elton John
+---
+
+# Content starts here
+```
+
+<br />
+
+**3. Syntax Highlighting:** MDX supports syntax highlighting for code blocks, just like traditional Markdown. You can specify the language for syntax highlighting using triple backticks (\```) or indentation.
+
+<br />
+
+**4. Embedded JSX Components:** You can embed JSX components directly within your MDX content. These components can interact with the surrounding content, and you can pass props to them for customization.
+
+<br />
+
+**5. Execution:** When MDX content is processed, the JSX components are transpiled and executed, allowing for dynamic behavior and interactivity.
+
+
+{/* // mdx end content */}
+            </blockquote>
+        </figure>
+        </div>
+    </article>
+  </FadeIn>
+</Container>

@@ -146,14 +146,14 @@ export function CalendarSection() {
 
     return (
         <>
-            <SectionIntro
-                title="The in-person meetup space in San Antonio continues to grow" 
-                className="mt-24 sm:mt-32 lg:mt-40"
+        <SectionIntro
+            eyebrow="More than just a discord server"
+            title="The in-person meetup space in San Antonio continues to grow"
+            className="mt-24 sm:mt-32 lg:mt-40"
             >
-                <p>
-                    These events offer a great opportunity to explore new spaces in the city and to learn about the resources available to designers and developers in the community
-             
-                </p>
+            <p>
+                These events offer a great opportunity to explore new spaces in the city and to learn about the resources available to designers and developers in the community
+            </p>
             </SectionIntro>
             <Container className="mt-16">
                 <FadeIn>

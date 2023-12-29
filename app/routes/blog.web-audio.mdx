@@ -1,0 +1,230 @@
+---
+title: Web Audio API
+description: The Web Audio API is a native browser API that serves as the foundation for audio programming in web applications, offering low-level control over audio signals
+published: 2023-10-31
+featured: true
+heroImage: /hero.png
+author: Elton John
+authorImage: /about.png
+authorRole: Rocketman
+---
+
+import { Container } from "../components/Container"
+import { FadeIn } from "../components/FadeIn"
+
+export const meta = () => {
+    return [
+        { title: frontmatter.title },
+        {
+            name: "description",
+            content: frontmatter.description,
+        },
+    ]
+}
+
+<Container className="mt-24 sm:mt-32 lg:mt-40 mx-auto max-w-7xl px-6 lg:px-8">
+    <FadeIn>
+    <header className="mx-auto flex max-w-5xl flex-col text-center">
+        <h1 className="mt-6 font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">
+            {frontmatter.title}
+        </h1>
+        <time className="order-first text-sm text-neutral-950">
+            {new Date(frontmatter.published).toLocaleDateString(
+            "en-US",
+                {
+                    month: "short",
+                    year: "numeric",
+                }
+            )}
+        </time>
+        <p className="mt-6 text-sm font-semibold text-neutral-950">
+            by {frontmatter.author}, {frontmatter.authorRole}
+        </p>
+    </header>
+    </FadeIn>
+
+    <FadeIn>
+    <article className="mt-24 sm:mt-32 lg:mt-40">
+        <div className="mx-auto max-w-5xl">
+            <figure className=''>
+                <div className="overflow-hidden rounded-xl bg-neutral-50 sm:rounded-3xl">
+                    <img 
+                        className="aspect-[16/10] object-cover grayscale w-full" sizes="(min-width: 768px) 42rem, 100vw"
+                        src={frontmatter.heroImage}
+                        alt="black and white house" 
+                    />        
+                </div>
+                <blockquote className="text-xl/7 text-neutral-600 mt-8 mx-auto">
+{/* // mdx start content */}
+     
+
+<strong> Web Audio API </strong> 
+<br />
+<br />
+The Web Audio API is a native browser API that serves as the foundation for audio programming in web applications, offering low-level control over audio signals. It provides a powerful and versatile system for controlling audio on the Web, allowing developers to choose audio sources, add effects to audio, create audio visualizations, apply spatial effects (such as panning) and much more.
+<br />
+<br />
+
+<strong class="text-spursTurq"> Basic outline of the steps required to set up the Web Audio API in a web application: </strong>
+
+1. **Create an `AudioContext`:**
+The AudioContext is the central interface for interacting with the Web Audio API. It represents an audio processing graph and provides a way to create and connect audio nodes. 
+To access all the features and functionality of the API, create an AudioContext instance at the beginning of your code.
+<br />
+
+    ```javascript
+    const audioContext = new AudioContext();
+    ```
+<br />
+
+2. **Inside the AudioContext, `create audio source`:**
+The audio context we've created needs some sound to play through it.
+The Web Audio API offers a few basic methods to generate simple audio tones like `Oscillator` and `AudioBuffer` but you can also Fetch an audio file (e.g., MP3, WAV) using the `fetch` API.
+<br />
+
+    ```javascript
+    const oscillator = audioContext.createOscillator();
+    oscillator.type = 'sine';
+    oscillator.frequency.value = 440;
+    oscillator.connect(audioContext.destination);
+    ```
+<br />
+
+3. **Controlling Audio:**
+When playing sound on the web, it's important to allow the user to control it.
+Controlling sound programmatically from JavaScript code is covered by browsers' autoplay support policies, as such is likely to be blocked without permission being granted by the user (or an allowlist).
+<br />
+
+    ```javascript
+    // Select our play button
+    const playButton = document.querySelector('button');
+
+    playButton.addEventListener(
+        'click',
+        () => {
+            // Check if context is in suspended state (autoplay policy)
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+            // Play or pause track depending on state
+            if (playButton.dataset.playing === 'false') {
+                audioElement.play();
+                playButton.dataset.playing = 'true';
+            } else if (playButton.dataset.playing === 'true') {
+                audioElement.pause();
+                playButton.dataset.playing = 'false';
+            }
+        },
+        false
+    );
+    audioElement.addEventListener(
+        'ended',
+        () => {
+            playButton.dataset.playing = 'false';
+        },
+        false
+    );
+    ```
+
+<br />
+<br />
+<strong> Tone.js </strong>
+<br />
+Tone.js is a library that sits on top of the Web Audio API, providing higher-level abstractions, a more intuitive API, and additional features to simplify audio programming and creative applications. Tone.js provides high-performance building blocks that allow you to create your own synthesizers, effects, and complex control signals using the Web Audio API. 
+<br />
+<br />
+
+<strong class="text-spursTurq">Example of building a basic drum machine: </strong>
+
+1. **Install Dependencies:**
+
+
+```sh
+npm install tone
+```
+<br />
+
+2. **Create Drum Component:**
+
+```jsx
+const Drum = ({ label, synth, trigger }) => {
+    const handlePlay = () => {
+        synth.triggerAttackRelease(trigger, '8n');
+    };
+
+    return (
+        <button
+            className="m-2 rounded bg-neutral-300 px-6 py-4 hover:bg-neutral-400"
+            onClick={handlePlay}
+        >
+            {label}
+        </button>
+    );
+};
+
+export default Drum;
+```
+<br />
+
+3. **Create DrumMachine Component:**
+
+```jsx
+import * as Tone from 'tone';
+import Drum from './Drum';
+
+const DrumMachine = () => {
+    const drumPads = [
+        { label: 'Kick', trigger: 'C2' },
+        { label: 'Snare', trigger: 'D2' },
+        { label: 'Hi-Hat', trigger: 'E2' },
+        // Add more drum pads as needed
+    ];
+
+    const synth = new Tone.Synth().toDestination();
+
+    return (
+        <div className="flex h-screen flex-wrap items-center justify-center">
+            {drumPads.map((pad, index) => (
+                <Drum
+                    key={index}
+                    label={pad.label}
+                    synth={synth}
+                    trigger={pad.trigger}
+                />
+            ))}
+        </div>
+    );
+};
+
+export default DrumMachine;
+```
+<br />
+
+4. **App.js:**
+
+In your main `App.js` file, you can render the `DrumMachine` component:
+
+```jsx
+import DrumMachine from './DrumMachine';
+
+function App() {
+    return (
+        <div className="App">
+            <h1 className="p-4 text-center text-3xl font-bold">Drum Machine</h1>
+            <DrumMachine />
+        </div>
+    );
+}
+
+export default App;
+```
+<br />
+
+
+{/* // mdx end content */}
+            </blockquote>
+        </figure>
+        </div>
+    </article>
+    </FadeIn>
+</Container>

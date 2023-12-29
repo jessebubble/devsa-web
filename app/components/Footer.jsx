@@ -69,8 +69,8 @@ const navigation = [
             { title: 'Home Page', href: '/' },
             { title: 'About devSA', href: '/about' },
             { title: 'Local Meetups', href: '/events' },
-            { title: 'Sponsor an event', href: '/sponsor' },
-            { title: 'The devSA shop ', href: '/shop' },
+            { title: 'The devSA Blog', href: '/blog' },
+            { title: 'Shop our collections', href: '/shop' },
         ],
     },
     {

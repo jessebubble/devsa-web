@@ -60,7 +60,7 @@ function NavBar({
                     />
                 </Link>
                 <div className="flex items-center gap-x-8">
-                    <Button href="/shop" invert={invert}>
+                    <Button href="/shop" invert={invert} className="">
                         <ShoppingCartIcon
                             className={clsx(
                                 'h-6 w-6',
@@ -127,12 +127,12 @@ function Navigation() {
     return (
         <nav className="font-display mt-px text-5xl font-medium tracking-tight text-white">
             <NavigationRow>
-                <NavigationItem href="/about">What we do</NavigationItem>
-                <NavigationItem href="/events">Events in SA</NavigationItem>
+                <NavigationItem href="/blog">Blog</NavigationItem>
+                <NavigationItem href="/events">Local meetups </NavigationItem>
             </NavigationRow>
             <NavigationRow>
-                <NavigationItem href="/sponsor">Sponsor an event</NavigationItem>
-                <NavigationItem href="/shop">Wear the web</NavigationItem>
+                <NavigationItem href="/about">About us</NavigationItem>
+                <NavigationItem href="/shop">Shop our collection</NavigationItem>
             </NavigationRow>
         </nav>
     );
@@ -223,7 +223,7 @@ function RootLayoutInner({ children }) {
                                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                                     <div>
                                         <h2 className="font-display text-base font-semibold text-white">
-                                            Build for the community
+                                            Building in public
                                         </h2>
                                         <Meetups
                                             invert

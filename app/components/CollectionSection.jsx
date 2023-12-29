@@ -9,6 +9,7 @@ import hat from "~/components/images/collections/hat.png"
 import devsa from "~/components/images/collections/devsa.png"
 import pins from "~/components/images/collections/pins.png"
 import deno from "~/components/images/collections/deno.png"
+import { SectionIntro } from '~/components/SectionIntro'
 
 const collections = [
     {
@@ -68,7 +69,20 @@ const collections = [
   
  export function CollectionSection() {
     return (
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <>
+
+      <SectionIntro
+        eyebrow="Wear the web"
+        title="Introducing the devSA Shop"
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+        <p>
+          Every purchase you make goes right back into our growing community! 
+          Your support helps cover our monthly costs and fuels the tools and services used to build for the tech community in SA
+        </p>
+      </SectionIntro>
+
+      <Container className="mt-16">
         <div className="space-y-24">
           {collections.map((group) => (
             <FadeInStagger key={group.title}>
@@ -112,6 +126,7 @@ const collections = [
           ))}
         </div>
       </Container>
+      </>
     )
   }
   
